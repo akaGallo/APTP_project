@@ -1,0 +1,91 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 188
+(Pre Simplification) - |A|+|P|+|E|: 282
+AIBR :: Number of Supporters = 146
+(After Easy Simplification) - |A|+|P|+|E|: 96
+|F|:75
+|X|:1
+Grounding and Simplification finished
+|A|:96
+|P|:0
+|E|:0
+ha:false htfalse
+Heuristic Number of Actions:521
+Heuristic Number of Actions Refactored:97
+Tot Number of Terms:249
+Tot Number of Terms Refactored:82
+H1 Setup Time (msec): 42
+Setting horizon to:NaN
+Helpful Action Pruning Activated
+Running WA-STAR
+h(n = s_0)=5.0
+f(n) = 5.0 (Expanded Nodes: 0, Evaluated States: 0, Time: 0.035)
+f(n) = 6.0 (Expanded Nodes: 26, Evaluated States: 250, Time: 0.261)
+f(n) = 7.0 (Expanded Nodes: 251, Evaluated States: 1300, Time: 0.644)
+f(n) = 8.0 (Expanded Nodes: 1971, Evaluated States: 8780, Time: 1.319)
+f(n) = 9.0 (Expanded Nodes: 6541, Evaluated States: 22070, Time: 2.384)
+f(n) = 10.0 (Expanded Nodes: 12741, Evaluated States: 37630, Time: 3.512)
+f(n) = 11.0 (Expanded Nodes: 22951, Evaluated States: 59520, Time: 4.848)
+f(n) = 12.0 (Expanded Nodes: 45601, Evaluated States: 107325, Time: 7.657)
+-------------Time: 10s ; Expanded Nodes: 59678 (Avg-Speed 5967.0 n/s); Evaluated States: 157716
+f(n) = 13.0 (Expanded Nodes: 96481, Evaluated States: 223725, Time: 13.305)
+-------------Time: 20s ; Expanded Nodes: 163382 (Avg-Speed 8169.0 n/s); Evaluated States: 379997
+f(n) = 14.0 (Expanded Nodes: 186721, Evaluated States: 423885, Time: 21.916)
+-------------Time: 30s ; Expanded Nodes: 277919 (Avg-Speed 9263.0 n/s); Evaluated States: 621985
+f(n) = 15.0 (Expanded Nodes: 324361, Evaluated States: 700605, Time: 33.633)
+-------------Time: 40s ; Expanded Nodes: 403697 (Avg-Speed 10092.0 n/s); Evaluated States: 864001
+-------------Time: 50s ; Expanded Nodes: 523314 (Avg-Speed 10466.0 n/s); Evaluated States: 1065564
+f(n) = 16.0 (Expanded Nodes: 524161, Evaluated States: 1066085, Time: 50.046)
+-------------Time: 60s ; Expanded Nodes: 647749 (Avg-Speed 10795.0 n/s); Evaluated States: 1299568
+f(n) = 17.0 (Expanded Nodes: 785881, Evaluated States: 1501285, Time: 68.606)
+-------------Time: 70s ; Expanded Nodes: 800367 (Avg-Speed 11433.0 n/s); Evaluated States: 1531336
+-------------Time: 80s ; Expanded Nodes: 939011 (Avg-Speed 11737.0 n/s); Evaluated States: 1740689
+f(n) = 18.0 (Expanded Nodes: 1087321, Evaluated States: 1939885, Time: 89.914)
+-------------Time: 90s ; Expanded Nodes: 1087894 (Avg-Speed 12087.0 n/s); Evaluated States: 1941839
+-------------Time: 100s ; Expanded Nodes: 1256486 (Avg-Speed 12564.0 n/s); Evaluated States: 2182653
+f(n) = 19.0 (Expanded Nodes: 1415761, Evaluated States: 2368365, Time: 107.734)
+-------------Time: 110s ; Expanded Nodes: 1452878 (Avg-Speed 13207.0 n/s); Evaluated States: 2439560
+-------------Time: 120s ; Expanded Nodes: 1640184 (Avg-Speed 13668.0 n/s); Evaluated States: 2670344
+f(n) = 20.0 (Expanded Nodes: 1736801, Evaluated States: 2764445, Time: 123.935)
+-------------Time: 130s ; Expanded Nodes: 1814851 (Avg-Speed 13960.0 n/s); Evaluated States: 2891193
+f(n) = 21.0 (Expanded Nodes: 1990761, Evaluated States: 3068885, Time: 139.225)
+-------------Time: 140s ; Expanded Nodes: 1994261 (Avg-Speed 14244.0 n/s); Evaluated States: 3078241
+f(n) = 22.0 (Expanded Nodes: 2164281, Evaluated States: 3232405, Time: 148.162)
+-------------Time: 150s ; Expanded Nodes: 2220935 (Avg-Speed 14806.0 n/s); Evaluated States: 3281887
+f(n) = 23.0 (Expanded Nodes: 2259641, Evaluated States: 3291365, Time: 150.656)
+Problem Solved
+0.0: (fill_box robot box4 pear)
+1.0: (fill_box robot box5 bandaid)
+2.0: (load_carrier robot helicopter box5)
+3.0: (fill_box robot box1 paracetamol)
+4.0: (fill_box robot box3 apple)
+5.0: (load_carrier robot helicopter box1)
+6.0: (load_carrier robot helicopter box3)
+7.0: (move_carrier_with_box depot Trento robot helicopter)
+8.0: (unload_carrier Trento robot helicopter box1)
+9.0: (unload_carrier Trento robot helicopter box3)
+10.0: (deliver_food Trento robot Matteo box3 apple)
+11.0: (unload_carrier Trento robot helicopter box5)
+12.0: (deliver_tool Trento robot Matteo box5 bandaid)
+13.0: (deliver_medicine Trento robot Chiara box1 paracetamol)
+14.0: (move_carrier_without_box Trento robot helicopter)
+15.0: (load_carrier robot helicopter box4)
+16.0: (fill_box robot box2 morphine)
+17.0: (load_carrier robot helicopter box2)
+18.0: (move_carrier_with_box depot Povo robot helicopter)
+19.0: (unload_carrier Povo robot helicopter box4)
+20.0: (unload_carrier Povo robot helicopter box2)
+21.0: (deliver_medicine Povo robot Marta box2 morphine)
+22.0: (deliver_food Povo robot Marta box4 pear)
+Plan-Length:23
+Metric (Search):23.0
+Planning Time:151691
+Heuristic Time:114141
+Search Time:150657
+Expanded Nodes:2259643
+States Evaluated:3291367
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:534406
+Number of Duplicates detected:4052195

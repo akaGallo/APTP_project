@@ -1,0 +1,31 @@
+Number of literals: 64
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+[01;34mNo analytic limits found, not considering limit effects of goal-only operators[00m
+20% of the ground temporal actions in this problem are compression-safe
+Initial heuristic = 21.000, admissible cost estimate 0.000
+
+Resorting to best-first search
+Running WA* with W = 1.000, not restarting with goal states
+b (20.000 | 10.002)b (19.000 | 13.004)b (18.000 | 13.004)b (17.000 | 14.005)b (16.000 | 18.007)b (15.000 | 20.008)b (15.000 | 19.008)b (14.000 | 19.008)b (13.000 | 21.009)b (12.000 | 24.009)b (11.000 | 30.011)b (11.000 | 29.011)b (10.000 | 29.011)b (9.000 | 31.012)b (8.000 | 32.013)b (7.000 | 34.014)b (6.000 | 34.014)b (5.000 | 36.015)b (5.000 | 35.015)b (4.000 | 36.015)b (4.000 | 35.015)b (3.000 | 37.016)b (2.000 | 37.016)b (1.000 | 38.016)(G);;;; Solution Found
+; States evaluated: 73576
+; Cost: 38.017
+; Time 73.06
+0.000: (fill_box robot box1 bandaid)  [1.000]
+1.001: (load_carrier robot helicopter box1 bandaid)  [2.000]
+3.002: (fill_box robot box3 apple)  [1.000]
+4.003: (load_carrier robot helicopter box3 apple)  [2.000]
+6.004: (fill_box robot box2 morphine)  [1.000]
+7.005: (load_carrier robot helicopter box2 morphine)  [2.000]
+9.006: (fill_box robot box4 pear)  [1.000]
+10.007: (load_carrier robot helicopter box4 pear)  [2.000]
+12.008: (move_carrier_with_box depot trento robot helicopter)  [7.000]
+19.009: (unload_carrier trento robot helicopter box3)  [2.000]
+21.010: (unload_carrier trento robot helicopter box2)  [2.000]
+23.011: (deliver_medicine trento robot matteo box2 morphine)  [1.000]
+24.012: (deliver_food trento robot chiara box3 apple)  [1.000]
+25.013: (move_carrier_with_box trento povo robot helicopter)  [7.000]
+32.014: (unload_carrier povo robot helicopter box4)  [2.000]
+34.015: (unload_carrier povo robot helicopter box1)  [2.000]
+36.016: (deliver_tool povo robot marta box1 bandaid)  [1.000]
+37.017: (deliver_food povo robot marta box4 pear)  [1.000]

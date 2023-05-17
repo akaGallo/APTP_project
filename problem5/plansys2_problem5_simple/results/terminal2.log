@@ -1,0 +1,30 @@
+ROS2 Planning System console. Type "quit" to finish
+> source pddl/problem5_problem
+> get plan
+plan: 
+0:	(fill_box depot robot box1 apple)	[3]
+3.001:	(load_carrier depot robot helicopter position1 box1 apple)	[5]
+8.002:	(fill_box depot robot box2 bandaid)	[3]
+11.003:	(load_carrier depot robot helicopter position2 box2 bandaid)	[5]
+16.004:	(fill_box depot robot box3 morphine)	[3]
+19.005:	(fill_box depot robot box4 pear)	[3]
+22.006:	(load_carrier depot robot helicopter position3 box3 morphine)	[5]
+27.007:	(load_carrier depot robot helicopter position4 box4 pear)	[5]
+32.008:	(move_carrier_with_box depot povo robot helicopter position1 box1)	[10]
+42.009:	(unload_carrier povo robot helicopter position1 box1)	[5]
+47.01:	(unload_carrier povo robot helicopter position2 box2)	[5]
+52.011:	(unfill_box povo robot box1 apple)	[1]
+53.012:	(deliver_food povo robot marta apple)	[1]
+54.013:	(unfill_box povo robot box2 bandaid)	[1]
+55.014:	(deliver_tool povo robot marta bandaid)	[1]
+56.015:	(move_carrier_with_box povo trento robot helicopter position3 box3)	[10]
+66.016:	(unload_carrier trento robot helicopter position3 box3)	[5]
+71.017:	(unload_carrier trento robot helicopter position4 box4)	[5]
+76.018:	(unfill_box trento robot box3 morphine)	[1]
+77.019:	(deliver_medicine trento robot matteo morphine)	[1]
+78.02:	(unfill_box trento robot box4 pear)	[1]
+79.021:	(deliver_food trento robot chiara pear)	[1]
+> run
+[INFO] [1683765995.405471762] [executor_client]: Plan Succeeded
+
+Successful finished

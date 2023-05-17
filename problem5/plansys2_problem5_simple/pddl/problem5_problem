@@ -1,0 +1,45 @@
+set instance depot depot
+set instance trento location
+set instance povo location
+set instance chiara injured_person
+set instance matteo injured_person
+set instance marta injured_person
+set instance robot robotic_agent
+set instance helicopter carrier
+set instance position1 pos1
+set instance position2 pos2
+set instance position3 pos3
+set instance position4 pos4
+set instance box1 box
+set instance box2 box
+set instance box3 box
+set instance box4 box
+set instance apple food
+set instance pear food
+set instance morphine medicine
+set instance bandaid tool
+
+set predicate (located_at chiara trento)
+set predicate (located_at matteo trento)
+set predicate (located_at marta povo)
+set predicate (located_at robot depot)
+set predicate (located_at helicopter depot)
+set predicate (located_at box1 depot)
+set predicate (located_at box2 depot)
+set predicate (located_at box3 depot)
+set predicate (located_at box4 depot)
+set predicate (is_at apple depot)
+set predicate (is_at pear depot)
+set predicate (is_at morphine depot)
+set predicate (is_at bandaid depot)
+set predicate (ready robot)
+set predicate (is_free position1)
+set predicate (is_free position2)
+set predicate (is_free position3)
+set predicate (is_free position4)
+set predicate (is_empty box1)
+set predicate (is_empty box2)
+set predicate (is_empty box3)
+set predicate (is_empty box4)
+
+set goal (and (has_food chiara pear)(has_medicine matteo morphine)(has_food marta apple)(has_tool marta bandaid))

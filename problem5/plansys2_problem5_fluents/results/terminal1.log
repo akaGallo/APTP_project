@@ -1,0 +1,97 @@
+#All required rosdeps installed successfully
+Starting >>> plansys2_problem5_fluents
+[Processing: plansys2_problem5_fluents]                             
+[Processing: plansys2_problem5_fluents]                                     
+Finished <<< plansys2_problem5_fluents [1min 23s]                              
+
+Summary: 1 package finished [1min 23s]
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [plansys2_node-1]: process started with pid [32329]
+[INFO] [fill_box_node-2]: process started with pid [32331]
+[INFO] [load_carrier_node-3]: process started with pid [32333]
+[INFO] [move_carrier_with_box_node-4]: process started with pid [32335]
+[INFO] [unload_carrier_node-5]: process started with pid [32352]
+[INFO] [deliver_food_node-6]: process started with pid [32375]
+[INFO] [deliver_medicine_node-7]: process started with pid [32378]
+[INFO] [deliver_tool_node-8]: process started with pid [32383]
+[INFO] [move_carrier_without_box_node-9]: process started with pid [32385]
+[plansys2_node-1] [INFO] [1683656148.294217944] [domain_expert_lc_mngr]: Creating client for service [domain_expert/get_state]
+[plansys2_node-1] [INFO] [1683656148.294899712] [domain_expert_lc_mngr]: Creating client for service [domain_expert/change_state]
+[plansys2_node-1] [INFO] [1683656148.301379458] [executor_lc_mngr]: Creating client for service [executor/get_state]
+[plansys2_node-1] [INFO] [1683656148.301693940] [executor_lc_mngr]: Creating client for service [executor/change_state]
+[plansys2_node-1] [INFO] [1683656148.307677301] [planner_lc_mngr]: Creating client for service [planner/get_state]
+[plansys2_node-1] [INFO] [1683656148.307761827] [planner_lc_mngr]: Creating client for service [planner/change_state]
+[plansys2_node-1] [INFO] [1683656148.316787583] [problem_expert_lc_mngr]: Creating client for service [problem_expert/get_state]
+[plansys2_node-1] [INFO] [1683656148.316908506] [problem_expert_lc_mngr]: Creating client for service [problem_expert/change_state]
+[plansys2_node-1] [INFO] [1683656148.339712712] [domain_expert]: [domain_expert] Configuring...
+[plansys2_node-1] [INFO] [1683656148.605809969] [domain_expert]: [domain_expert] Configured
+[plansys2_node-1] [INFO] [1683656148.607021926] [domain_expert_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1683656148.608052220] [domain_expert_lc_mngr]: Node domain_expert_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1683656148.609044437] [problem_expert]: [problem_expert] Configuring...
+[plansys2_node-1] [INFO] [1683656148.610470686] [problem_expert]: [problem_expert] Configured
+[plansys2_node-1] [INFO] [1683656148.611032019] [problem_expert_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1683656148.611654472] [problem_expert_lc_mngr]: Node problem_expert_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1683656148.611925159] [planner]: [planner] Configuring...
+[plansys2_node-1] [INFO] [1683656148.613316983] [planner]: Created solver : POPF of type plansys2/POPFPlanSolver
+[plansys2_node-1] [INFO] [1683656148.613379211] [planner]: [planner] Configured
+[plansys2_node-1] [INFO] [1683656148.614462997] [planner_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1683656148.615171355] [planner_lc_mngr]: Node planner_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1683656148.615404275] [executor]: [executor] Configuring...
+[plansys2_node-1] [INFO] [1683656148.936704479] [executor]: [executor] Configured
+[plansys2_node-1] [INFO] [1683656148.937846198] [executor_lc_mngr]: Transition 1 successfully triggered.
+[plansys2_node-1] [INFO] [1683656148.938626486] [executor_lc_mngr]: Node executor_lc_mngr has current state inactive.
+[plansys2_node-1] [INFO] [1683656148.938867746] [domain_expert]: [domain_expert] Activating...
+[plansys2_node-1] [INFO] [1683656148.938891097] [domain_expert]: [domain_expert] Activated
+[plansys2_node-1] [INFO] [1683656148.939834020] [domain_expert_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1683656148.940104483] [problem_expert]: [problem_expert] Activating...
+[plansys2_node-1] [INFO] [1683656148.940130201] [problem_expert]: [problem_expert] Activated
+[plansys2_node-1] [INFO] [1683656148.941010424] [problem_expert_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1683656148.941369154] [planner]: [planner] Activating...
+[plansys2_node-1] [INFO] [1683656148.941390809] [planner]: [planner] Activated
+[plansys2_node-1] [INFO] [1683656148.942202913] [planner_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1683656148.942437585] [executor]: [executor] Activating...
+[plansys2_node-1] [INFO] [1683656148.942461567] [executor]: [executor] Activated
+[plansys2_node-1] [INFO] [1683656148.942701535] [executor_lc_mngr]: Transition 3 successfully triggered.
+[plansys2_node-1] [INFO] [1683656148.943529086] [domain_expert_lc_mngr]: Node domain_expert_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1683656148.944143924] [problem_expert_lc_mngr]: Node problem_expert_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1683656148.944660589] [planner_lc_mngr]: Node planner_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1683656148.945166850] [executor_lc_mngr]: Node executor_lc_mngr has current state active.
+[plansys2_node-1] [INFO] [1683656169.478616269] [executor]: Action fill_box timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.484735061] [executor]: Action fill_box timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.510944244] [executor]: Action load_carrier timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.543280376] [executor]: Action load_carrier timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.551615474] [executor]: Action fill_box timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.609309676] [executor]: Action fill_box timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.658373151] [executor]: Action load_carrier timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.672218409] [executor]: Action load_carrier timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.693202989] [executor]: Action move_carrier_with_box timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.720262789] [executor]: Action unload_carrier timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.735183607] [executor]: Action unload_carrier timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.772964258] [executor]: Action deliver_food timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.822315413] [executor]: Action deliver_tool timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.834719904] [executor]: Action move_carrier_with_box timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.864120607] [executor]: Action unload_carrier timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.892444691] [executor]: Action unload_carrier timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.918831667] [executor]: Action deliver_food timeout percentage -1.000000
+[plansys2_node-1] [INFO] [1683656169.942538566] [executor]: Action deliver_medicine timeout percentage -1.000000
+[plansys2_node-1] [WARN] [1683656169.992423782] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[plansys2_node-1] [WARN] [1683656170.155123697] [rcl.logging_rosout]: Publisher already registered for provided node name. If this is due to multiple nodes with the same name then all logs for that logger name will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+Filling box ... [100%]  
+Filling box ... [100%]  
+Loading carrier ... [100%]  
+Loading carrier ... [100%]  
+Filling box ... [100%]  
+Filling box ... [100%]  
+Loading carrier ... [100%]  
+Loading carrier ... [100%]  
+Moving carrier with box ... [100%]  
+Unloading carrier ... [100%]  
+Unloading carrier ... [100%]  
+Delivering food ... [100%]  
+Delivering tool ... [100%]  
+Moving carrier with box ... [100%]  
+Unloading carrier ... [100%]  
+Unloading carrier ... [100%]  
+Delivering food ... [100%]  
+Delivering medicine ... [100%]  
+[plansys2_node-1] [INFO] [1683656228.069014579] [executor]: Plan Succeeded

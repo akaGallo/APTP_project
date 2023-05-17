@@ -1,0 +1,77 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 92
+(Pre Simplification) - |A|+|P|+|E|: 282
+AIBR :: Number of Supporters = 146
+(After Easy Simplification) - |A|+|P|+|E|: 96
+|F|:75
+|X|:1
+Grounding and Simplification finished
+|A|:96
+|P|:0
+|E|:0
+ha:false htfalse
+Heuristic Number of Actions:521
+Heuristic Number of Actions Refactored:97
+Tot Number of Terms:249
+Tot Number of Terms Refactored:82
+H1 Setup Time (msec): 38
+Setting horizon to:NaN
+Helpful Action Pruning Activated
+Running Greedy Best First Search
+h(n = s_0)=70.0
+ g(n)= 1.0 h(n)=51.0
+ g(n)= 2.0 h(n)=34.0
+ g(n)= 3.0 h(n)=30.0
+ g(n)= 4.0 h(n)=28.0
+ g(n)= 5.0 h(n)=26.0
+ g(n)= 6.0 h(n)=23.0
+ g(n)= 7.0 h(n)=16.0
+ g(n)= 8.0 h(n)=15.0
+ g(n)= 9.0 h(n)=14.0
+ g(n)= 17.0 h(n)=13.0
+ g(n)= 18.0 h(n)=12.0
+ g(n)= 19.0 h(n)=8.0
+ g(n)= 20.0 h(n)=7.0
+ g(n)= 21.0 h(n)=6.0
+ g(n)= 22.0 h(n)=4.0
+ g(n)= 23.0 h(n)=2.0
+ g(n)= 24.0 h(n)=1.0
+ g(n)= 25.0 h(n)=0.0
+Problem Solved
+0.0: (fill_box robot box5 apple)
+1.0: (load_carrier robot helicopter box5)
+2.0: (fill_box robot box4 paracetamol)
+3.0: (fill_box robot box3 bandaid)
+4.0: (load_carrier robot helicopter box4)
+5.0: (load_carrier robot helicopter box3)
+6.0: (fill_box robot box2 pear)
+7.0: (fill_box robot box1 morphine)
+8.0: (move_carrier_with_box depot Trento robot helicopter)
+9.0: (unload_carrier Trento robot helicopter box3)
+10.0: (deliver_tool Trento robot Matteo box3 bandaid)
+11.0: (unload_carrier Trento robot helicopter box4)
+12.0: (deliver_medicine Trento robot Chiara box4 paracetamol)
+13.0: (move_carrier_with_box Trento Povo robot helicopter)
+14.0: (unload_carrier Povo robot helicopter box5)
+15.0: (move_carrier_without_box Povo robot helicopter)
+16.0: (load_carrier robot helicopter box1)
+17.0: (load_carrier robot helicopter box2)
+18.0: (move_carrier_with_box depot Povo robot helicopter)
+19.0: (unload_carrier Povo robot helicopter box1)
+20.0: (deliver_medicine Povo robot Marta box1 morphine)
+21.0: (deliver_food Povo robot Marta box5 apple)
+22.0: (move_carrier_with_box Povo Trento robot helicopter)
+23.0: (unload_carrier Trento robot helicopter box2)
+24.0: (deliver_food Trento robot Matteo box2 pear)
+Plan-Length:25
+Metric (Search):25.0
+Planning Time:1171
+Heuristic Time:144
+Search Time:278
+Expanded Nodes:268
+States Evaluated:605
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:32
+Number of Duplicates detected:217

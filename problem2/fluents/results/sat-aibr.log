@@ -1,0 +1,57 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 187
+(Pre Simplification) - |A|+|P|+|E|: 282
+AIBR :: Number of Supporters = 146
+(After Easy Simplification) - |A|+|P|+|E|: 96
+|F|:75
+|X|:1
+Grounding and Simplification finished
+|A|:96
+|P|:0
+|E|:0
+ha:false htfalse
+AIBR selected
+AIBR :: Number of Supporters = 116
+Wrong setting for break-ties. Arbitrary tie breaking
+Setting horizon to:NaN
+Helpful Action Pruning Activated
+Running WA-STAR
+h(n = s_0)=68.0
+f(n) = 68.0 (Expanded Nodes: 0, Evaluated States: 0, Time: 0.027)
+Problem Solved
+0.0: (fill_box robot box1 morphine)
+1.0: (fill_box robot box5 paracetamol)
+2.0: (fill_box robot box4 apple)
+3.0: (fill_box robot box3 bandaid)
+4.0: (fill_box robot box2 pear)
+5.0: (load_carrier robot helicopter box1)
+6.0: (load_carrier robot helicopter box3)
+7.0: (load_carrier robot helicopter box4)
+8.0: (load_carrier robot helicopter box5)
+9.0: (move_carrier_with_box depot Povo robot helicopter)
+10.0: (unload_carrier Povo robot helicopter box1)
+11.0: (deliver_medicine Povo robot Marta box1 morphine)
+12.0: (move_carrier_with_box Povo Trento robot helicopter)
+13.0: (unload_carrier Trento robot helicopter box3)
+14.0: (unload_carrier Trento robot helicopter box5)
+15.0: (deliver_tool Trento robot Matteo box3 bandaid)
+16.0: (unload_carrier Trento robot helicopter box4)
+17.0: (deliver_food Trento robot Matteo box4 apple)
+18.0: (deliver_medicine Trento robot Chiara box5 paracetamol)
+19.0: (move_carrier_without_box Trento robot helicopter)
+20.0: (load_carrier robot helicopter box2)
+21.0: (move_carrier_with_box depot Povo robot helicopter)
+22.0: (unload_carrier Povo robot helicopter box2)
+23.0: (deliver_food Povo robot Marta box2 pear)
+Plan-Length:24
+Metric (Search):24.0
+Planning Time:1709
+Heuristic Time:499
+Search Time:659
+Expanded Nodes:81
+States Evaluated:275
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:16
+Number of Duplicates detected:147

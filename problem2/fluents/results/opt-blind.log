@@ -1,0 +1,83 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 147
+(Pre Simplification) - |A|+|P|+|E|: 282
+(After Easy Simplification) - |A|+|P|+|E|: 126
+|F|:80
+|X|:1
+Grounding and Simplification finished
+|A|:126
+|P|:0
+|E|:0
+ha:false htfalse
+Setting horizon to:NaN
+Helpful Action Pruning Activated
+Running WA-STAR
+h(n = s_0)=1.0
+f(n) = 1.0 (Expanded Nodes: 0, Evaluated States: 0, Time: 0.009)
+f(n) = 2.0 (Expanded Nodes: 1, Evaluated States: 25, Time: 0.033)
+f(n) = 3.0 (Expanded Nodes: 26, Evaluated States: 250, Time: 0.064)
+f(n) = 4.0 (Expanded Nodes: 251, Evaluated States: 1300, Time: 0.277)
+f(n) = 5.0 (Expanded Nodes: 1301, Evaluated States: 4750, Time: 0.392)
+f(n) = 6.0 (Expanded Nodes: 4751, Evaluated States: 13965, Time: 0.794)
+f(n) = 7.0 (Expanded Nodes: 13966, Evaluated States: 33130, Time: 1.204)
+f(n) = 8.0 (Expanded Nodes: 33131, Evaluated States: 68610, Time: 1.888)
+f(n) = 9.0 (Expanded Nodes: 68611, Evaluated States: 137010, Time: 2.926)
+f(n) = 10.0 (Expanded Nodes: 137011, Evaluated States: 262930, Time: 4.954)
+f(n) = 11.0 (Expanded Nodes: 262931, Evaluated States: 464330, Time: 8.12)
+-------------Time: 10s ; Expanded Nodes: 375653 (Avg-Speed 37565.0 n/s); Evaluated States: 647805
+f(n) = 12.0 (Expanded Nodes: 464331, Evaluated States: 756850, Time: 11.66)
+f(n) = 13.0 (Expanded Nodes: 756851, Evaluated States: 1146610, Time: 17.913)
+-------------Time: 20s ; Expanded Nodes: 839234 (Avg-Speed 41961.0 n/s); Evaluated States: 1286746
+-------------Time: 30s ; Expanded Nodes: 1090145 (Avg-Speed 36338.0 n/s); Evaluated States: 1548487
+f(n) = 14.0 (Expanded Nodes: 1146611, Evaluated States: 1610330, Time: 34.192)
+-------------Time: 40s ; Expanded Nodes: 1401804 (Avg-Speed 35045.0 n/s); Evaluated States: 1930352
+f(n) = 15.0 (Expanded Nodes: 1610331, Evaluated States: 2107330, Time: 44.408)
+-------------Time: 50s ; Expanded Nodes: 1754890 (Avg-Speed 35097.0 n/s); Evaluated States: 2275558
+f(n) = 16.0 (Expanded Nodes: 2107331, Evaluated States: 2576210, Time: 59.405)
+-------------Time: 60s ; Expanded Nodes: 2151515 (Avg-Speed 35858.0 n/s); Evaluated States: 2632543
+f(n) = 17.0 (Expanded Nodes: 2576211, Evaluated States: 2964530, Time: 68.006)
+-------------Time: 70s ; Expanded Nodes: 2637554 (Avg-Speed 37679.0 n/s); Evaluated States: 3034239
+-------------Time: 80s ; Expanded Nodes: 2955356 (Avg-Speed 36941.0 n/s); Evaluated States: 3252367
+f(n) = 18.0 (Expanded Nodes: 2964531, Evaluated States: 3255170, Time: 80.287)
+f(n) = 19.0 (Expanded Nodes: 3255171, Evaluated States: 3467650, Time: 86.641)
+-------------Time: 90s ; Expanded Nodes: 3432671 (Avg-Speed 38140.0 n/s); Evaluated States: 3601152
+f(n) = 20.0 (Expanded Nodes: 3467651, Evaluated States: 3613330, Time: 90.677)
+f(n) = 21.0 (Expanded Nodes: 3613331, Evaluated States: 3696490, Time: 92.971)
+f(n) = 22.0 (Expanded Nodes: 3696491, Evaluated States: 3735090, Time: 93.953)
+f(n) = 23.0 (Expanded Nodes: 3735091, Evaluated States: 3745170, Time: 94.516)
+Problem Solved
+0.0: (fill_box robot box4 morphine)
+1.0: (load_carrier robot helicopter box4)
+2.0: (fill_box robot box3 paracetamol)
+3.0: (fill_box robot box2 apple)
+4.0: (load_carrier robot helicopter box2)
+5.0: (move_carrier_with_box depot Povo robot helicopter)
+6.0: (unload_carrier Povo robot helicopter box4)
+7.0: (unload_carrier Povo robot helicopter box2)
+8.0: (deliver_medicine Povo robot Marta box4 morphine)
+9.0: (deliver_food Povo robot Marta box2 apple)
+10.0: (move_carrier_without_box Povo robot helicopter)
+11.0: (load_carrier robot helicopter box3)
+12.0: (fill_box robot box1 bandaid)
+13.0: (fill_box robot box5 pear)
+14.0: (load_carrier robot helicopter box5)
+15.0: (load_carrier robot helicopter box1)
+16.0: (move_carrier_with_box depot Trento robot helicopter)
+17.0: (unload_carrier Trento robot helicopter box3)
+18.0: (unload_carrier Trento robot helicopter box5)
+19.0: (unload_carrier Trento robot helicopter box1)
+20.0: (deliver_tool Trento robot Matteo box1 bandaid)
+21.0: (deliver_food Trento robot Matteo box5 pear)
+22.0: (deliver_medicine Trento robot Chiara box3 paracetamol)
+Plan-Length:23
+Metric (Search):23.0
+Planning Time:95800
+Heuristic Time:620
+Search Time:94518
+Expanded Nodes:3735108
+States Evaluated:3745175
+Fixed constraint violations during search (zero-crossing):0
+Number of Dead-Ends detected:0
+Number of Duplicates detected:7237715

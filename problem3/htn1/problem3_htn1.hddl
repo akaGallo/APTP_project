@@ -1,0 +1,55 @@
+(define (problem emergency_services_logistics_problem3_htn1)
+    (:domain emergency_services_logistics_domain3_htn1)
+
+    ; ----------------------------------- DEFINE OBJECTS -----------------------------------
+
+    (:objects        
+        Trento Povo - location
+        Chiara Matteo Marta - injured_person
+        robot - robotic_agent
+        helicopter - carrier
+        pos1 pos2 pos3 pos4 - compartment
+        box1 box2 box3 box4 box5 box6 - box
+        apple pear - food
+        morphine paracetamol - medicine
+        bandaid gauze - tool
+    )
+
+    ; ------------------------------ DEFINE HIERARCHICAL GOAL ------------------------------
+
+    (:htn
+		:parameters ()
+		:subtasks (and
+            (task0 (delivery_3_contents Marta pear paracetamol gauze))
+            (task1 (delivery_1_content Chiara morphine))
+            (task2 (delivery_2_contents Matteo apple bandaid))
+		)
+		:ordering (and
+		    (task0 < task1) ; the delivery to Marta must be made before the delivery to Chiara
+		    (task1 < task2) ; the delivery to Chiara must be made before the delivery to Matteo
+        )
+	)
+
+    ; --------------------------------- DEFINE INITIAL STATE -------------------------------
+
+    (:init        
+        (located_at Chiara Trento) (located_at Matteo Trento) (located_at Marta Povo)
+        
+        (located_at robot depot) (located_at helicopter depot)
+
+        (located_at box1 depot) (located_at box2 depot) (located_at box3 depot)
+        (located_at box4 depot) (located_at box5 depot) (located_at box6 depot)
+
+        (located_at apple depot) (located_at pear depot)
+        (located_at morphine depot) (located_at paracetamol depot)
+        (located_at bandaid depot) (located_at gauze depot)
+
+        (is_free pos1) (is_free pos2) (is_free pos3) (is_free pos4)
+
+        (is_empty box1) (is_empty box2) (is_empty box3) (is_empty box4) (is_empty box5) (is_empty box6)
+
+        (need_medicine Chiara)
+        (need_food Matteo) (need_tool Matteo)
+        (need_food Marta) (need_medicine Marta) (need_tool Marta)
+    )
+)

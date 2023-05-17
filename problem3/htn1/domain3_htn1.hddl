@@ -1,0 +1,388 @@
+(define (domain emergency_services_logistics_domain3_htn1)
+
+    ; -------------------------------- DEFINE REQUIREMENTS --------------------------------
+
+    (:requirements :strips :typing :equality :negative-preconditions :hierachie)
+
+    ; ----------------------------------- DEFINE TYPES ------------------------------------
+
+    (:types
+        location - object                                   ; a location in the world
+        movable - object                                    ; an object that can be moved and/or is located at a location
+        injured_person robotic_agent - movable              ; a person who is injured, an autonomous robot that can perform tasks
+        carrier box content - movable                       ; a carrier for transporting objects, a box for containing contents, a content that can be transported in a box
+        food medicine tool - content                        ; contents that can be delivered to injured people
+        compartment - object                                ; a space within a carrier that can contain a box
+    )
+
+    ; --------------------------------- DEFINE CONSTANTS ----------------------------------
+
+    (:constants
+        depot - location                                    ; a constant depot location for all objects to start at
+    )
+
+    ; -------------------------------- DEFINE PREDICATES ----------------------------------
+
+    (:predicates
+        (located_at ?m - movable ?l - location)             ; whether an object movable is at a particular location
+        (is_empty ?b - box)                                 ; whether a box is empty
+        (has_content ?b - box ?c - content)                 ; whether a box has a certain type of content
+        (is_free ?s - compartment)                          ; whether a compartment is free (not occupied by a box)
+        (is_occupied ?s - compartment ?b - box)             ; whether a compartment is occupied by box
+        (need_food ?p - injured_person)                     ; whether an injured person needs food
+        (need_medicine ?p - injured_person)                 ; whether an injured person needs medicine
+        (need_tool ?p - injured_person)                     ; whether an injured person needs a tool
+    )
+
+    ; ----------------------------------- DEFINE TASKS -------------------------------------
+
+    ; Task to deliver 1 content to an injured person
+    (:task delivery_1_content
+		:parameters (?p - injured_person ?c - content)
+		:precondition ()
+		:effect ()
+	)   
+
+    ; Task to deliver 2 contents to an injured person
+    (:task delivery_2_contents
+		:parameters (?p - injured_person ?c1 ?c2 - content)
+		:precondition ()
+		:effect ()
+	)   
+
+    ; Task to deliver 3 contents to an injured person
+    (:task delivery_3_contents
+		:parameters (?p - injured_person ?c1 ?c2 ?c3 - content)
+		:precondition ()
+		:effect ()
+	)   
+
+    ; Task to go from one location to another
+   (:task move
+		:parameters (?from ?to - location)
+		:precondition ()
+		:effect ()
+	)   
+
+    ; Task to prepare a content for delivery
+    (:task prepare_content
+		:parameters (?c - content ?b - box)
+		:precondition ()
+		:effect ()
+	)
+
+    ; Task to prepare a box for delivery
+    (:task prepare_box
+		:parameters (?a - carrier ?b - box)
+		:precondition ()
+		:effect ()
+	)
+   
+    ; Task to prepare a carrier for delivery
+    (:task prepare_carrier
+		:parameters (?a - carrier ?b - box ?c - content)
+		:precondition ()
+		:effect ()
+	)   
+
+    ; Task to prepare a complete delivery
+   (:task prepare_delivery
+		:parameters (?a - carrier ?b - box ?c - content)
+		:precondition ()
+		:effect ()
+	)
+
+    ; Task to perform final delivery to an injured person
+    (:task final_delivery
+		:parameters (?p - injured_person ?c - content)
+		:precondition ()
+		:effect ()
+	)
+
+    ; ---------------------------------- DEFINE METHODS ------------------------------------
+
+    (:method m_delivery_1_content_in_progress
+		:parameters (?from ?to - location ?a - carrier ?p - injured_person ?b - box ?c - content)
+		:task (delivery_1_content ?p ?c)
+		:subtasks (and
+            (task0 (prepare_carrier ?a ?b ?c))      ; prepare the carrier with the box and content
+            (task1 (move ?from ?to))               ; go to the destination from the source
+            (task2 (prepare_delivery ?a ?b ?c))     ; prepare the delivery with the carrier, box and content
+            (task3 (move ?to ?from))               ; return to the source from the destination
+		)
+		:ordering (and
+            (task0 < task1)     ; prepare the carrier before going to the destination
+            (task1 < task2)     ; go to the destination before preparing the delivery
+            (task2 < task3)     ; prepare the delivery before returning to the source
+		)
+	)
+
+    (:method m_delivery_2_contents_in_progress
+		:parameters (?from ?to - location ?a - carrier ?p - injured_person ?b1 ?b2 - box ?c1 ?c2 - content)
+		:task (delivery_2_contents ?p ?c1 ?c2)
+		:subtasks (and
+            (task0 (prepare_carrier ?a ?b1 ?c1))    ; prepare the carrier with the first box and content
+            (task1 (prepare_carrier ?a ?b2 ?c2))    ; prepare the carrier with the second box and content
+            (task2 (move ?from ?to))               ; go to the destination from the source
+            (task3 (prepare_delivery ?a ?b1 ?c1))   ; prepare the delivery with the first box and content
+            (task4 (prepare_delivery ?a ?b2 ?c2))   ; prepare the delivery with the second box and content
+            (task5 (move ?to ?from))               ; return to the source from the destination
+		)
+		:ordering (and
+            (task0 < task2)
+            (task1 < task2)     ; prepare the carrier before going to the destination
+            (task2 < task3)
+            (task2 < task4)     ; go to the destination before preparing the deliveries
+            (task3 < task5)
+            (task4 < task5)     ; prepare the deliveries before returning to the source
+		)
+	)
+
+    (:method m_delivery_3_contents_in_progress
+		:parameters (?from ?to - location ?a - carrier ?p - injured_person ?b1 ?b2 ?b3 - box ?c1 ?c2 ?c3 - content)
+		:task (delivery_3_contents ?p ?c1 ?c2 ?c3)
+		:subtasks (and
+            (task0 (prepare_carrier ?a ?b1 ?c1))    ; prepare the carrier with the first box and content
+            (task1 (prepare_carrier ?a ?b2 ?c2))    ; prepare the carrier with the second box and content
+            (task2 (prepare_carrier ?a ?b3 ?c3))    ; prepare the carrier with the third box and content
+            (task3 (move ?from ?to))               ; go to the destination from the source
+		    (task4 (prepare_delivery ?a ?b1 ?c1))   ; prepare the delivery with the first box and content
+		    (task5 (prepare_delivery ?a ?b2 ?c2))   ; prepare the delivery with the second box and content
+		    (task6 (prepare_delivery ?a ?b3 ?c3))   ; prepare the delivery with the third box and content
+		    (task7 (move ?to ?from))               ; return to the source from the destination
+		)
+		:ordering (and
+		    (task0 < task3)
+		    (task1 < task3)
+		    (task2 < task3)     ; prepare the carrier before going to the destination
+		    (task3 < task4)
+		    (task3 < task5)
+		    (task3 < task6)     ; go to the destination before preparing the deliveries
+		    (task4 < task7)
+		    (task5 < task7)
+		    (task6 < task7)     ; prepare the deliveries before returning to the source
+		)
+    )
+
+    (:method m_complete_carrier_preparation
+		:parameters (?a - carrier ?b - box ?c - content)
+		:task (prepare_carrier ?a ?b ?c)
+		:subtasks (and
+            (task0 (prepare_content ?c ?b))         ; prepare the content of the box
+            (task1 (prepare_box ?a ?b))             ; load the box onto the carrier
+		)
+        :ordering (and
+            (task0 < task1)     ; prepare the content inside the box before loading the box onto the carrier
+		)
+	)
+
+    (:method m_complete_content_preparation
+		:parameters (?l - location ?r - robotic_agent ?b - box ?c - content)
+		:task (prepare_content ?c ?b)
+		:subtasks (and
+		    (task0 (fill_box ?l ?r ?b ?c))
+		)
+	)
+
+    (:method m_complete_box_preparation
+		:parameters (?l - location ?r - robotic_agent ?a - carrier ?s - compartment ?b - box)
+		:task (prepare_box ?a ?b)
+		:subtasks (and
+		    (task0 (load_carrier ?l ?r ?a ?s ?b))
+		)
+	)
+
+    (:method m_complete_movement_from_depot
+		:parameters (?from ?to - location ?r - robotic_agent ?a - carrier)
+		:task (move ?from ?to)
+		:subtasks (and
+		    (task0 (move_carrier_with_box ?from ?to ?r ?a))
+		)
+	)
+
+    (:method m_complete_delivery_preparation
+		:parameters (?l - location ?r - robotic_agent ?a - carrier ?s - compartment ?b - box ?p - injured_person ?c - content)
+		:task (prepare_delivery ?a ?b ?c)
+		:subtasks (and
+		    (task0 (unload_carrier ?l ?r ?a ?s ?b))
+		    (task1 (final_delivery ?p ?c))              ; complete the delivery
+		)
+		:ordering (and
+		    (task0 < task1)     ; complete the final delivery after unloading the box from the carrier
+		)
+	)
+
+    (:method m_complete_food_delivery
+		:parameters (?l - location ?r - robotic_agent ?p - injured_person ?b - box ?f - food)
+		:task (final_delivery ?p ?f)
+		:subtasks (and
+		    (task0 (deliver_food ?l ?r ?p ?b ?f))
+		)
+	)
+
+    (:method m_complete_medicine_delivery
+		:parameters (?l - location ?r - robotic_agent ?p - injured_person ?b - box ?m - medicine)
+		:task (final_delivery ?p ?m)
+		:subtasks (and
+		    (task0 (deliver_medicine ?l ?r ?p ?b ?m))
+		)
+	)
+
+    (:method m_complete_tool_delivery
+		:parameters (?l - location ?r - robotic_agent ?p - injured_person ?b - box ?t - tool)
+		:task (final_delivery ?p ?t)
+		:subtasks (and
+		    (task0 (deliver_tool ?l ?r ?p ?b ?t))
+		)
+	)
+
+    (:method m_complete_movement_to_depot
+		:parameters (?from ?to - location ?r - robotic_agent ?a - carrier)
+		:task (move ?from ?to)
+		:subtasks (and
+		    (task0 (move_carrier_without_box ?from ?to ?r ?a))
+		)
+	)
+    
+    ; ---------------------------------- DEFINE ACTIONS ------------------------------------
+
+    ; FILL A BOX WITH A CERTAIN TYPE OF CONTENT
+    (:action fill_box
+        :parameters (?l - location ?r - robotic_agent ?b - box ?c - content)
+        :precondition (and
+            (= ?l depot)
+            (located_at ?r ?l)
+            (located_at ?b ?l)
+            (located_at ?c ?l)
+            (is_empty ?b)
+        )
+        :effect (and
+            (not (located_at ?c ?l))
+            (not (is_empty ?b))
+            (has_content ?b ?c)
+        )
+    )
+
+    ; LOAD A FILLED BOX ONTO A ROBOT
+    (:action load_carrier
+        :parameters (?l - location ?r - robotic_agent ?a - carrier ?s - compartment ?b - box)
+        :precondition (and
+            (= ?l depot)
+            (located_at ?r ?l)
+            (located_at ?a ?l)
+            (located_at ?b ?l)
+            (not (is_empty ?b))
+            (is_free ?s)
+        )
+        :effect (and
+            (not (located_at ?b ?l))
+            (not (is_free ?s))
+            (is_occupied ?s ?b)
+        )
+    )
+    
+    ; MOVE A ROBOT FROM THE DEPOT/A LOCATION TO ANOTHER LOCATION CARRYING A FILLED BOX
+    (:action move_carrier_with_box
+        :parameters (?from ?to - location ?r - robotic_agent ?a - carrier)
+        :precondition (and
+            (not (= ?to depot))
+            (not (= ?from ?to))
+            (located_at ?r ?from)
+            (located_at ?a ?from)
+            (exists (?s - compartment) (not (is_free ?s)))
+        )
+        :effect (and
+            (not (located_at ?r ?from))
+            (located_at ?r ?to)
+            (not (located_at ?a ?from))
+            (located_at ?a ?to)
+        )
+    )
+
+    ; UNLOAD A BOX FROM A CARRIER
+    (:action unload_carrier
+        :parameters (?l - location ?r - robotic_agent ?a - carrier ?s - compartment ?b - box)
+        :precondition (and
+            (located_at ?r ?l)
+            (located_at ?a ?l)
+            (is_occupied ?s ?b)
+        )
+        :effect (and
+            (located_at ?b ?l)
+            (not (is_occupied ?s ?b))
+            (is_free ?s)
+        )
+    )
+
+    ; DELIVER A FOOD TO AN INJURED PERSON
+    (:action deliver_food
+        :parameters (?l - location ?r - robotic_agent ?p - injured_person ?b - box ?f - food)
+        :precondition (and
+            (located_at ?p ?l)
+            (located_at ?r ?l)
+            (located_at ?b ?l)
+            (has_content ?b ?f)
+            (need_food ?p)
+        )
+        :effect (and
+            (not (has_content ?b ?f))
+            (is_empty ?b)
+            (located_at ?f ?l)
+            (not (need_food ?p))
+        )
+    )
+
+    ; DELIVER A MEDICINE TO AN INJURED PERSON
+    (:action deliver_medicine
+        :parameters (?l - location ?r - robotic_agent ?p - injured_person ?b - box ?m - medicine)
+        :precondition (and
+            (located_at ?p ?l)
+            (located_at ?r ?l)
+            (located_at ?b ?l)
+            (has_content ?b ?m)
+            (need_medicine ?p)
+        )
+        :effect (and
+            (not (has_content ?b ?m))
+            (is_empty ?b)
+            (located_at ?m ?l)
+            (not (need_medicine ?p))
+        )
+    )
+
+    ; DELIVER A TOOL TO AN INJURED PERSON
+    (:action deliver_tool
+        :parameters (?l - location ?r - robotic_agent ?p - injured_person ?b - box ?t - tool)
+        :precondition (and
+            (located_at ?p ?l)
+            (located_at ?r ?l)
+            (located_at ?b ?l)
+            (has_content ?b ?t)
+            (need_tool ?p)
+        )
+        :effect (and
+            (not (has_content ?b ?t))
+            (is_empty ?b)
+            (located_at ?t ?l)
+            (not (need_tool ?p))
+        )
+    )
+
+    ; MOVE A ROBOT FROM A LOCATION TO THE DEPOT CARRYING AN EMPTY BOX
+    (:action move_carrier_without_box
+        :parameters (?from ?to - location ?r - robotic_agent ?a - carrier)
+        :precondition (and
+            (= ?to depot)
+            (not (= ?from ?to))
+            (located_at ?r ?from)
+            (located_at ?a ?from)
+            (forall (?s - compartment) (is_free ?s))
+        )
+        :effect (and
+            (not (located_at ?r ?from))
+            (located_at ?r ?to)
+            (not (located_at ?a ?from))
+            (located_at ?a ?to)
+        )
+    )
+)

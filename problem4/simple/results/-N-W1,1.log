@@ -1,0 +1,37 @@
+Number of literals: 82
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+[01;34mNo analytic limits found, not considering limit effects of goal-only operators[00m
+46% of the ground temporal actions in this problem are compression-safe
+Initial heuristic = 26.000, admissible cost estimate 0.000
+b (25.000 | 1.000)b (24.000 | 10.002)b (23.000 | 12.003)b (22.000 | 13.004)b (21.000 | 14.004)b (20.000 | 20.007)b (19.000 | 29.009)b (18.000 | 31.010)b (17.000 | 32.011)b (16.000 | 33.012)b (15.000 | 39.014)b (14.000 | 39.014)b (13.000 | 41.015)b (12.000 | 41.015)b (11.000 | 48.016)b (10.000 | 50.016)b (9.000 | 58.020)b (8.000 | 58.021)b (7.000 | 60.021)b (6.000 | 60.022)b (5.000 | 67.022)b (4.000 | 69.023)b (3.000 | 69.024)b (2.000 | 70.024)b (1.000 | 70.025)(G);;;; Solution Found
+; States evaluated: 59
+; Cost: 71.026
+; Time 0.18
+0.000: (fill_box robot box1 morphine)  [1.000]
+1.001: (load_carrier robot helicopter pos1 box1 morphine)  [2.000]
+3.002: (move_carrier_with_box depot trento robot helicopter pos1 box1)  [7.000]
+10.003: (unload_carrier trento robot helicopter pos1 box1)  [2.000]
+12.004: (unfill_box trento robot box1 morphine)  [1.000]
+13.005: (deliver_medicine trento robot matteo morphine)  [1.000]
+14.006: (move_carrier_without_box trento robot helicopter)  [5.000]
+19.007: (fill_box robot box2 bandaid)  [1.000]
+20.008: (load_carrier robot helicopter pos1 box2 bandaid)  [2.000]
+22.009: (move_carrier_with_box depot povo robot helicopter pos1 box2)  [7.000]
+29.010: (unload_carrier povo robot helicopter pos1 box2)  [2.000]
+31.011: (unfill_box povo robot box2 bandaid)  [1.000]
+32.012: (deliver_tool povo robot marta bandaid)  [1.000]
+33.013: (move_carrier_without_box povo robot helicopter)  [5.000]
+38.014: (fill_box robot box3 apple)  [1.000]
+39.015: (load_carrier robot helicopter pos1 box3 apple)  [2.000]
+41.016: (move_carrier_with_box depot trento robot helicopter pos1 box3)  [7.000]
+48.017: (unload_carrier trento robot helicopter pos1 box3)  [2.000]
+50.018: (unfill_box trento robot box3 apple)  [1.000]
+51.019: (deliver_food trento robot chiara apple)  [1.000]
+52.020: (move_carrier_without_box trento robot helicopter)  [5.000]
+57.021: (fill_box robot box4 pear)  [1.000]
+58.022: (load_carrier robot helicopter pos1 box4 pear)  [2.000]
+60.023: (move_carrier_with_box depot povo robot helicopter pos1 box4)  [7.000]
+67.024: (unload_carrier povo robot helicopter pos1 box4)  [2.000]
+69.025: (unfill_box povo robot box4 pear)  [1.000]
+70.026: (deliver_food povo robot marta pear)  [1.000]
