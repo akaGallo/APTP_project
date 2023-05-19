@@ -97,7 +97,7 @@ sudo apt install -y apptainer
 <p align="justify">Planutils is a suite of planners that simplifies the installation and usage of planners within a virtual environment. Once installed, you can conveniently use the suite of planners within the provided virtual environment.</p>
 
 ```bash
-sudo pip install planutils
+pip install planutils
 planutils activate
 ```
 
