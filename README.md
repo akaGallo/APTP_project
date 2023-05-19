@@ -293,7 +293,7 @@ cd Desktop/APTP_project/problem5
   ```
   
 ### SIMPLE
-1. Open the Terminal 1 and run the following code:
+1. Open the TERMINAL 1 and run the following code:
 <p align="justify">Proceed with the following steps in terminal one to build the dependencies, compile the project, and host the PlanSys2 planner based on ROS.</p>
 
   ```bash
@@ -301,7 +301,7 @@ cd plansys2_problem5_simple
 bash terminal1.sh
   ```
   
-2. Then, open the Terminal 2 and execute the final output:
+2. Then, open the TERMINAL 2 and execute the final output:
 <p align="justify">After setting up terminal 1, open a new terminal for terminal 2, that is dedicated to running the PlanSys2_terminal, which facilitates sending desired data (instances, predicates, goals) to the planner, computing a plan, and executing it.</p>
 
   ```bash
@@ -315,13 +315,13 @@ run
 ```
 
 ### FLUENTS
-1. Open the Terminal 1 and run the following code:
+1. Open the TERMINAL 1 and run the following code:
   ```bash
 cd plansys2_problem5_fluents
 bash terminal1.sh
   ```
   
-2. Then, open the Terminal 2 and execute the final output:
+2. Then, open the TERMINAL 2 and execute the final output:
   ```bash
 cd plansys2_problem5_simple
 bash terminal2.sh
