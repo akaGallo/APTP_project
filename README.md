@@ -82,6 +82,7 @@ vim singularity.conf
 ## Apptainer and PLANUTILS
 1. Install Apptainer
 <p align="justify">To enable Fast Downward support in your system, you need to install Apptainer beforehand. Installing Apptainer facilitates the containerization of Fast Downward, enabling you to create self-contained and portable environments for running Fast Downward effectively.</p>
+
 ```bash
 sudo apt update
 sudo apt upgrade
@@ -93,6 +94,7 @@ sudo apt install -y apptainer
 
 2. Install Planutils
 <p align="justify">Planutils is a suite of planners that simplifies the installation and usage of planners within a virtual environment. Once installed, you can conveniently use the suite of planners within the provided virtual environment.</p>
+
 ```bash
 sudo pip install planutils
 planutils activate
@@ -140,7 +142,7 @@ sudo apt install -y software-properties-common
 sudo add-apt-repository universe
   ```
 
-2. Add the ROS 2 GPG key with apt and add the repository to your sources list, then install ROS-Base
+2. Add the ROS 2 GPG key with apt and add the repository to your sources list, then install ROS-Base.
   ```bash
 sudo apt update
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
@@ -153,7 +155,7 @@ sudo apt install ros-humble-ros-base
   ```
 
 ### COLCON for ROS2
-Get the files from the ROS2 repository and add its key to apt
+Get the files from the ROS2 repository and add its key to apt.
   ```bash
 sudo sh -c 'echo "deb [arch=amd64,arm64] http://repo.ros2.org/ubuntu/main `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
@@ -171,7 +173,8 @@ rosdep update
 
 ***
 # Running the planners
-For running the planners on the domain and problem files of the assignment in this repository, you will need to run the following code:
+<p align="justify">For running the planners on the domain and problem files of the assignment in this repository, you will need to run the following code:</p>
+
   ```bash
 cd Desktop
 git clone https://github.com/akaGallo/APTP_project
