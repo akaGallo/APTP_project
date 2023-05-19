@@ -368,10 +368,37 @@ run
 ***
 # RESULTS
 ## Problem 1
+### Simple
+<img width="979" alt="p1-simple" src="https://github.com/akaGallo/APTP_project/assets/117358202/77e1754d-b133-4401-8ef1-978b56a68ca5">
 
-<p>
-    <img src="[path_to_image](https://github.com/akaGallo/APTP_project/assets/117358202/aa5674b6-ba7f-41b1-806e-aded210da8cb)" alt>
-    <em>image_caption</em>
-</p>
+### Crane
+<img width="990" alt="p1-crane" src="https://github.com/akaGallo/APTP_project/assets/117358202/aed2a206-3022-4714-ac5c-77b57f15f607">
 
-## Task 2
+## Problem 2
+### Simple
+
+### Fluents
+<img width="804" alt="opt" src="https://github.com/akaGallo/APTP_project/assets/117358202/33f6606f-833b-48eb-97f3-e0f80e36bd78">
+<img width="748" alt="sat-aibr" src="https://github.com/akaGallo/APTP_project/assets/117358202/006cd158-f484-4f83-9cb7-90ead20e8183">
+<img width="737" alt="sat" src="https://github.com/akaGallo/APTP_project/assets/117358202/3f89f2f6-8460-4685-a996-bc94c5b94d68">
+
+## Problem 3
+### Htn 1
+<img width="454" alt="htn1" src="https://github.com/akaGallo/APTP_project/assets/117358202/dc92a58a-ecbb-452a-af32-d1fe2a87974a">
+
+### Htn 2
+<img width="454" alt="htn2" src="https://github.com/akaGallo/APTP_project/assets/117358202/923e9433-1b41-4102-947e-96e4d7f4520c">
+
+## Problem 4
+### Simple
+<img width="1002" alt="p4-simple" src="https://github.com/akaGallo/APTP_project/assets/117358202/26694ec9-91b9-40fc-9425-516ac1f8f16c">
+
+### Fluents
+<img width="985" alt="p4-fluents" src="https://github.com/akaGallo/APTP_project/assets/117358202/2af6397a-9348-4c97-9a0c-3b096bd80b5e">
+
+## Problem 5
+### Simple
+<img width="1023" alt="p5-simple" src="https://github.com/akaGallo/APTP_project/assets/117358202/1bd840a6-11ae-4b49-9f71-ef4c8ff488ef">
+
+### Fluents
+<img width="1011" alt="p5-fluents" src="https://github.com/akaGallo/APTP_project/assets/117358202/cf6b5d2d-0fac-476d-910e-c0e9afe24018">
