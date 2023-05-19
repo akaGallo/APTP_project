@@ -164,7 +164,7 @@ sudo apt install python3-colcon-common-extensions
   ```
 
 ### ROSDEP
-Install rosdep
+Install rosdep.
   ```bash
 sudo apt-get install python3-rosdep
 sudo rosdep init
@@ -181,6 +181,8 @@ git clone https://github.com/akaGallo/APTP_project
   ```
 
 ## PROBLEM 1
+<p align="justify">To run the Problem 1, you will need the Planutils environment and the FastDownward planner for the usage of FF, LAMA, LAMA-FIRST and DOWNWARD.</p>
+
   ```bash
 cd Desktop/APTP_project/problem1
   ```
@@ -206,6 +208,8 @@ planutils run downward domain1_crane.pddl problem1_crane.pddl “—search astar
   ```
 
 ## PROBLEM 2
+<p align="justify">To run the Problem 2, you have to use again FF, LAMA and LAMA-FIRST for the SIMPLE case, while for the FLUENTS case you will need the ENHSP-2020 planner.</p>
+
   ```bash
 cd Desktop/APTP_project/problem2
   ```
@@ -236,23 +240,29 @@ planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -pl
   ```
 
 ## PROBLEM 3
+<p align="justify">For running the Problem 3, you will need the PANDA planner making sure to load it in the your workspace.</p>
+
   ```bash
 cd Desktop/APTP_project/problem3
   ```
   
 ### HTN1
   ```bash
+cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn1
 cd htn1
 java -jar PANDA.jar -parser hddl domain3_htn1.hddl problem3_htn1.hddl
   ```
 
 ### HTN2
   ```bash
+cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn2
 cd htn2
 java -jar PANDA.jar -parser hddl domain3_htn2.hddl problem3_htn2.hddl
   ```
 
 ## PROBLEM 4
+<p align="justify">To run the Problem 4, you will need the OPTIC planner.</p>
+
   ```bash
 cd Desktop/APTP_project/problem4
   ```
@@ -276,18 +286,24 @@ planutils run optic “-N -E -W1,1 domain4_fluents.pddl problem4_fluents.pddl”
   ```
 
 ## PROBLEM 5
+<p align="justify">To run PlanSys2, you need to have two separate terminals running simultaneously.</p>
+
   ```bash
 cd Desktop/APTP_project/problem5
   ```
   
 ### SIMPLE
 1. Open the Terminal 1 and run the following code:
+<p align="justify">Proceed with the following steps in terminal one to build the dependencies, compile the project, and host the PlanSys2 planner based on ROS.</p>
+
   ```bash
 cd plansys2_problem5_simple
 bash terminal1.sh
   ```
   
 2. Then, open the Terminal 2 and execute the final output:
+<p align="justify">After setting up terminal 1, open a new terminal for terminal 2, that is dedicated to running the PlanSys2_terminal, which facilitates sending desired data (instances, predicates, goals) to the planner, computing a plan, and executing it.</p>
+
   ```bash
 cd plansys2_problem5_simple
 bash terminal2.sh
