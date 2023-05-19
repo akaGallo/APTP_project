@@ -403,3 +403,4 @@ run
 ![p5-simple](https://github.com/akaGallo/APTP_project/assets/117358202/e39aeaef-d076-4c62-9744-15676b9a3795)
 
 ### Fluents
+![p5-fluents](https://github.com/akaGallo/APTP_project/assets/117358202/af6b5853-af49-4ac9-bb63-4eb8a1e08a3c)
