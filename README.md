@@ -234,15 +234,15 @@ planutils run lama-first domain2_simple.pddl problem2_simple.pddl
   ```bash
 cd fluents
 # for each of the following wait the end of its execution
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-blind”
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-hmax”
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-hrmax”
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-aibr”
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hadd”
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrp”
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrph”
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrphj”
-planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hradd”
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-blind"
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-hmax"
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-hrmax"
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-aibr"
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hadd"
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrp"
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrph"
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrphj"
+planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hradd"
   ```
 
 ## PROBLEM 3
@@ -277,18 +277,18 @@ cd Desktop/APTP_project/problem4
   ```bash
 cd simple
 # for each of the following wait the end of its execution
-planutils run optic “-N domain4_simple.pddl problem4_simple.pddl”
-planutils run optic “-N -W1,1 domain4_simple.pddl problem4_simple.pddl”
-planutils run optic “-N -E -W1,1 domain4_simple.pddl problem4_simple.pddl”
+planutils run optic "-N domain4_simple.pddl problem4_simple.pddl"
+planutils run optic "-N -W1,1 domain4_simple.pddl problem4_simple.pddl"
+planutils run optic "-N -E -W1,1 domain4_simple.pddl problem4_simple.pddl"
   ```
 
 ### FLUENTS
   ```bash
 cd fluents
 # for each of the following wait the end of its execution
-planutils run optic “-N domain4_fluents.pddl problem4_fluents.pddl”
-planutils run optic “-N -W1,1 domain4_fluents.pddl problem4_fluents.pddl”
-planutils run optic “-N -E -W1,1 domain4_fluents.pddl problem4_fluents.pddl”
+planutils run optic "-N domain4_fluents.pddl problem4_fluents.pddl"
+planutils run optic "-N -W1,1 domain4_fluents.pddl problem4_fluents.pddl"
+planutils run optic "-N -E -W1,1 domain4_fluents.pddl problem4_fluents.pddl"
   ```
 
 ## PROBLEM 5
