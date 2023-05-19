@@ -109,7 +109,7 @@ exit
 
 4. Install DOWNWARD, FF, LAMA, LAMA-FIRST, ENHSP-2020, OPTIC, TFD:
 ```bash
-sudo planutils install -y downward ff lama lama-first enhsp-2020 optic tfd
+planutils install -y downward ff lama lama-first enhsp-2020 optic tfd
 ```
 
 ## PANDA
