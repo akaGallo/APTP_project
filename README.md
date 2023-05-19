@@ -30,7 +30,7 @@ The mentioned planners are available and ready to install on Linux. It is recomm
 ```bash
 sudo apt update
 sudo apt upgrade
-sudo apt install python3-pip
+sudo apt install -y python3-pip
 ```
 
 ## GO and SINGULARITY
