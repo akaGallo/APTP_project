@@ -227,8 +227,8 @@ cd APTP_project/problem2
 cd simple
 # for each of the following wait the end of its execution
 planutils run ff domain2_simple.pddl problem2_simple.pddl
-planutils run lama domain2_simple.pddl problem2_simple.pddl
 planutils run lama-first domain2_simple.pddl problem2_simple.pddl
+planutils run lama domain2_simple.pddl problem2_simple.pddl
   ```
 
 ### FLUENTS
