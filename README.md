@@ -240,7 +240,7 @@ planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -pl
   ```
 
 ## PROBLEM 3
-<p align="justify">For running the Problem 3, you will need the PANDA planner making sure to load it in the your workspace.</p>
+<p align="justify">To run Problem 3, make sure to have the PANDA planner available in your workspace. Load the PANDA planner before proceeding further.</p>
 
   ```bash
 cd Desktop/APTP_project/problem3
