@@ -158,7 +158,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 sudo apt update
 sudo apt upgrade
 
-sudo apt install ros-humble-ros-base
+sudo apt install -y ros-humble-ros-base
   ```
 
 ### COLCON for ROS2
@@ -167,7 +167,7 @@ Get the files from the ROS2 repository and add its key to apt.
 sudo sh -c 'echo "deb [arch=amd64,arm64] http://repo.ros2.org/ubuntu/main `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 sudo apt update
-sudo apt install python3-colcon-common-extensions
+sudo apt install -y python3-colcon-common-extensions
   ```
 
 ### ROSDEP
