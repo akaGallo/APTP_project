@@ -174,7 +174,7 @@ rosdep update
 For running the planners on the domain and problem files of the assignment in this repository, you will need to run the following code:
   ```bash
 cd Desktop
-git clone https://github.com/akaGallo/EmergencyServicesLogistics-APTP2023.git planning
+git clone https://github.com/akaGallo/APTP_project planning
   ```
 
 ## PROBLEM 1
