@@ -228,7 +228,6 @@ cd simple
 planutils run ff domain2_simple.pddl problem2_simple.pddl
 planutils run lama domain2_simple.pddl problem2_simple.pddl
 planutils run lama-first domain2_simple.pddl problem2_simple.pddl
-planutils run downward domain2_simple.pddl problem2_simple.pddl "--search astar(goalcount)"
   ```
 
 ### FLUENTS
