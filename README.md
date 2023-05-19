@@ -312,7 +312,11 @@ bash terminal1.sh
 2. Then, open the TERMINAL 2 and execute the final output:
 <p align="justify">After setting up terminal 1, open a new terminal for terminal 2, that is dedicated to running the PlanSys2_terminal, which facilitates sending desired data (instances, predicates, goals) to the planner, computing a plan, and executing it.</p>
 
-<p align="justify">NOTE: if the runninng is blocking because in terminal 1 appears this line "[ERROR] [plansys2_node-1]: process has died [pid 7203, exit code -11, cmd '/opt/ros/humble/lib/plansys2_bringup/plansys2_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_uaitmls4 --params-file /opt/ros/humble/share/plansys2_bringup/params/plansys2_params.yaml'].", press Ctrl+C in both terminals and launch again the same code.</p>
+NOTE: If the program execution is halted due to the appearance of the following line in Terminal 1: 
+  ```bash
+[ERROR] [plansys2_node-1]: process has died [pid 7203, exit code -11, cmd '/opt/ros/humble/lib/plansys2_bringup/plansys2_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_uaitmls4 --params-file /opt/ros/humble/share/plansys2_bringup/params/plansys2_params.yaml'].
+```
+please terminate both terminals by pressing Ctrl+C, and then relaunch the same code again.
 
   ```bash
 cd Desktop/APTP_project/problem5/plansys2_problem5_simple
