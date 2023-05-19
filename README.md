@@ -7,7 +7,7 @@ The repository consists of the following components:
 - Assignment PDF: This document provides the project's assignment details.
 - Problem Folders: There are 5 separate folders for each of the five problems described in the assignment.
 - Report PDF: This document contains the project report.
-- README file: it serves as a guide to install all the necessary materials required to run the code, and how to execute it.
+- README file: it serves as a guide to install all the necessary materials required to run the code, how to execute it and the obtained results in form of screenshot.
 
 Here's a brief description of the five different tasks:
 
