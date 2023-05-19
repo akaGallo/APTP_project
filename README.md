@@ -288,7 +288,7 @@ bash terminal1.sh
   ```bash
 cd plansys2_problem5_simple
 bash terminal2.sh
-# [INFO] [...] [terminal]:No problem file specified.
+# [INFO] [...] [terminal]: No problem file specified.
 # ROS2 Planning System console. Type "quit" to finish
 source pddl/problem5_problem
 get plan
@@ -306,7 +306,7 @@ bash terminal1.sh
   ```bash
 cd plansys2_problem5_simple
 bash terminal2.sh
-# [INFO] [...] [terminal]:No problem file specified.
+# [INFO] [...] [terminal]: No problem file specified.
 # ROS2 Planning System console. Type "quit" to finish
 source pddl/problem5_problem
 get plan
