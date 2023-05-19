@@ -117,7 +117,7 @@ Panda is a planner based on Java. it can be donwloaded and run using the followi
 1. Update the packages information and install java
 ```bash
 sudo apt-get update
-sudo apt install default-jre
+sudo apt install -y default-jre
 ```
 2. Download PANDA planner in your workspace
 ```bash
