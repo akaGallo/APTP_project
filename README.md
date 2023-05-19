@@ -33,7 +33,7 @@ sudo apt install python3-pip
 ```
 
 ## GO and SINGULARITY
-Planutils is a suite of planners that simplifies the installation and usage of planners within a virtual environment. It requires Singularity, a container platform, for installation. After installing Singularity, you can install Planutils using pip3. Once installed, you can conveniently use the suite of planners within the provided virtual environment.
+We require Singularity, a container platform, for installation. After installing Singularity, you can install Planutils using pip3.
 
 1. Install GO
 ```bash
@@ -80,7 +80,7 @@ vim singularity.conf
 
 ## Apptainer and PLANUTILS
 1. Install Apptainer
-First, on Ubuntu based containers install software-properties-common package to obtain add-apt-repository command. On Ubuntu Desktop/Server derived systems skip this step.
+To enable Fast Downward support in your system, you need to install Apptainer beforehand. Installing Apptainer facilitates the containerization of Fast Downward, enabling you to create self-contained and portable environments for running Fast Downward effectively.
 ```bash
 sudo apt update
 sudo apt upgrade
@@ -91,6 +91,7 @@ sudo apt install -y apptainer
 ```
 
 2. Install Planutils
+Planutils is a suite of planners that simplifies the installation and usage of planners within a virtual environment. Once installed, you can conveniently use the suite of planners within the provided virtual environment.
 ```bash
 sudo pip install planutils
 planutils activate
@@ -98,63 +99,56 @@ planutils setup
 exit
 ```
 
-5. Install the DOWNWARD, FF, LAMA, LAMA-FIRST, ENHSP-2020, OPTIC, TFD
+3. Install the DOWNWARD, FF, LAMA, LAMA-FIRST, ENHSP-2020, OPTIC, TFD
 ```bash
 sudo planutils install -y downward ff lama lama-first enhsp-2020 optic tfd
 ```
 
 ## PANDA
-Panda is a planner based on Java. it can be donwloaded and ran using the following commands
+Panda is a planner based on Java. it can be donwloaded and run using the following commands
 1. Update the packages information and install java
 ```bash
-apt-get update
-apt install default-jre
+sudo apt-get update
+sudo apt install default-jre
 ```
-2. Download PANDA planner in you workspace
+2. Download PANDA planner in your workspace
 ```bash
-cd <your_workspace>
+cd Desktop/
 wget https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.090/panda/PANDA.jar
 ```
 
 ## PLANSYS2
 PlanSys2 is based on ROS2. To compile a PlanSys2 project you will need ROS2 and 2 more packages that are required to build the dependencies of the project (Rosdep) and to compile it (Colcon for ROS2). Follow the ensuing steps to install everything
 
+To compile a PlanSys2 project, you must have ROS2 installed, along with two additional packages necessary for building the project's dependencies (Rosdep) and compiling it (Colcon for ROS2). Follow the steps below to install all the required components.
+
 ### ROS2
-1. Set locale
+Begin by installing ROS2. Make sure to follow the installation instructions specific to your operating system, which can be found on the official ROS2 website.
+Once ROS2 is successfully installed, proceed to install Rosdep. Rosdep is a package manager for ROS that manages system dependencies required by ROS packages. Install Rosdep by executing the appropriate commands for your operating system. Detailed instructions can be found in the ROS documentation.
+
+1. Set locale and Setup sources
   ```bash
-locale  # check for UTF-8
-sudo apt update && sudo apt install locales
+locale
+sudo apt update
+sudo apt install locales
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
-locale  # verify settings
-  ```
-  
-2. Setup sources
-  ```bash
-sudo apt install software-properties-common
+locale
+
+sudo apt install -y software-properties-common
 sudo add-apt-repository universe
   ```
 
-3. Add the ROS 2 GPG key with apt
+2. Add the ROS 2 GPG key with apt and add the repository to your sources list, then install ROS-Base
   ```bash
 sudo apt update && sudo apt install curl
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-  ```
-
-4. Add the repository to your sources list
-  ```bash
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-  ```
 
-5. Update your apt repository caches after setting up the repositories and verify that all the currently installed packages are up to date before installing ROS2
-  ```bash
 sudo apt update
 sudo apt upgrade
-  ```
 
-6. Install ROS-Base (Bare Bones): Communication libraries, message packages, command line tools. This command will not install GUI tools (they are useless since we are working from WSL terminal).
-  ```bash
 sudo apt install ros-humble-ros-base
   ```
 
@@ -163,10 +157,6 @@ sudo apt install ros-humble-ros-base
   ```bash
 sudo sh -c 'echo "deb [arch=amd64,arm64] http://repo.ros2.org/ubuntu/main `lsb_release -cs` main" > /etc/apt/sources.list.d/ros2-latest.list'
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-  ```
-
-2. Update your apt repository caches after setting up the repositories and the install the package using apt
-  ```bash
 sudo apt update
 sudo apt install python3-colcon-common-extensions
   ```
@@ -175,10 +165,6 @@ sudo apt install python3-colcon-common-extensions
 1. Install rosdep
   ```bash
 sudo apt-get install python3-rosdep
-  ```
-
-2. Initialize and update it
-  ```bash
 sudo rosdep init
 rosdep update
   ```
