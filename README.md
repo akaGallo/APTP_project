@@ -22,10 +22,10 @@ Here's a brief description of the five different tasks:
 * <p align="justify">Problem 5: it further extends Problem 4 by employing a more sophisticated planner that allows the definition of C++ code for each action. Once a plan is obtained, which minimizes the required time, it is possible to simulate the proposed solution by running the plan using the implemented C++ codes. To run this problem, you will need ROS2 and PlanSys2.</p>
 
 <p align="justify">The mentioned planners are available and ready to install on Linux. It is recommended to use a Linux machine for the best experience. Alternatively, you can install [Ubuntu 22.04](https://ubuntu.com/download/desktop) for the [VirtualBox](https://www.virtualbox.org) directly on MacOS. Instructions for installing it are provided in the subsequent section. If you are using Linux, you can proceed directly to the section that explains the installation process for the planners on Linux.</p>
-****
-# Installing all the planners for Ubuntu 22.04 on VirtualBox for MacOS
 
-At the beginning, to update your packages and prepare for the next steps, please run the following commands:
+****
+# Install all the planners in Ubuntu 22.04 using VirtualBox for MacOS
+<p align="justify">At the beginning, to update your packages and prepare for the next steps, please run the following commands:</p>
 ```bash
 sudo apt update
 sudo apt upgrade
@@ -33,7 +33,7 @@ sudo apt install python3-pip
 ```
 
 ## GO and SINGULARITY
-We require Singularity, a container platform, for installation. After installing Singularity, you can install Planutils using pip3.
+<p align="justify">We require Singularity, a container platform, for installation. After installing Singularity, you can install Planutils using pip3.</p>
 
 1. Install GO
 ```bash
@@ -80,7 +80,7 @@ vim singularity.conf
 
 ## Apptainer and PLANUTILS
 1. Install Apptainer
-To enable Fast Downward support in your system, you need to install Apptainer beforehand. Installing Apptainer facilitates the containerization of Fast Downward, enabling you to create self-contained and portable environments for running Fast Downward effectively.
+<p align="justify">To enable Fast Downward support in your system, you need to install Apptainer beforehand. Installing Apptainer facilitates the containerization of Fast Downward, enabling you to create self-contained and portable environments for running Fast Downward effectively.</p>
 ```bash
 sudo apt update
 sudo apt upgrade
@@ -91,7 +91,7 @@ sudo apt install -y apptainer
 ```
 
 2. Install Planutils
-Planutils is a suite of planners that simplifies the installation and usage of planners within a virtual environment. Once installed, you can conveniently use the suite of planners within the provided virtual environment.
+<p align="justify">Planutils is a suite of planners that simplifies the installation and usage of planners within a virtual environment. Once installed, you can conveniently use the suite of planners within the provided virtual environment.</p>
 ```bash
 sudo pip install planutils
 planutils activate
@@ -105,7 +105,7 @@ sudo planutils install -y downward ff lama lama-first enhsp-2020 optic tfd
 ```
 
 ## PANDA
-Panda is a planner based on Java. it can be donwloaded and run using the following commands
+Panda is a planner based on Java. it can be donwloaded and run using the following commands:
 1. Update the packages information and install java
 ```bash
 sudo apt-get update
@@ -118,13 +118,12 @@ wget https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.090/panda/PANDA.j
 ```
 
 ## PLANSYS2
-PlanSys2 is based on ROS2. To compile a PlanSys2 project you will need ROS2 and 2 more packages that are required to build the dependencies of the project (Rosdep) and to compile it (Colcon for ROS2). Follow the ensuing steps to install everything
-
-To compile a PlanSys2 project, you must have ROS2 installed, along with two additional packages necessary for building the project's dependencies (Rosdep) and compiling it (Colcon for ROS2). Follow the steps below to install all the required components.
+<p align="justify">PlanSys2 is based on ROS2. To compile a PlanSys2 project you will need ROS2 and 2 more packages that are required to build the dependencies of the project (Rosdep) and to compile it (Colcon for ROS2). Follow the ensuing steps to install everything.
+To compile a PlanSys2 project, you must have ROS2 installed, along with two additional packages necessary for building the project's dependencies (Rosdep) and compiling it (Colcon for ROS2). Follow the steps below to install all the required components.</p>
 
 ### ROS2
-Begin by installing ROS2. Make sure to follow the installation instructions specific to your operating system, which can be found on the official ROS2 website.
-Once ROS2 is successfully installed, proceed to install Rosdep. Rosdep is a package manager for ROS that manages system dependencies required by ROS packages. Install Rosdep by executing the appropriate commands for your operating system. Detailed instructions can be found in the ROS documentation.
+<p align="justify">Begin by installing ROS2. Make sure to follow the installation instructions specific to your operating system, which can be found on the official ROS2 website.
+Once ROS2 is successfully installed, proceed to install Rosdep. Rosdep is a package manager for ROS that manages system dependencies required by ROS packages. Install Rosdep by executing the appropriate commands for your operating system. Detailed instructions can be found in the ROS documentation.</p>
 
 1. Set locale and Setup sources
   ```bash
