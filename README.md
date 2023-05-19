@@ -146,6 +146,7 @@ locale
 
 sudo apt install -y software-properties-common
 sudo add-apt-repository universe
+# Press ENTER
   ```
 
 2. Add the ROS 2 GPG key with apt and add the repository to your sources list, then install ROS-Base.
