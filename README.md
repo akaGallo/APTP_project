@@ -135,6 +135,7 @@ Once ROS2 is successfully installed, proceed to install Rosdep. Rosdep is a pack
 
 1. Set locale and Setup sources
   ```bash
+cd
 locale
 sudo apt update
 sudo apt install locales
