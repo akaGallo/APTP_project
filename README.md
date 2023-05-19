@@ -338,3 +338,5 @@ source pddl/problem5_problem
 get plan
 run
 ```
+<img width="337" alt="p1-simple-ff" src="https://github.com/akaGallo/APTP_project/assets/117358202/157bd479-cd46-40dd-a58d-285b58216de6">
+
