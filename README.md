@@ -54,7 +54,7 @@ mkdir -p ${GOPATH}/src/github.com/sylabs
 cd ${GOPATH}/src/github.com/sylabs
 ```
 
-2. Install Singularity
+2. Install SINGULARITY
 ```bash
 git clone https://github.com/sylabs/singularity.git
 cd singularity
@@ -80,7 +80,7 @@ vim singularity.conf
 ```
 
 ## Apptainer and PLANUTILS
-1. Install Apptainer
+1. Install APPTAINER
 <p align="justify">To enable Fast Downward support in your system, you need to install Apptainer beforehand. Installing Apptainer facilitates the containerization of Fast Downward, enabling you to create self-contained and portable environments for running Fast Downward effectively.</p>
 
 ```bash
@@ -92,13 +92,17 @@ sudo apt update
 sudo apt install -y apptainer
 ```
 
-2. Install Planutils
+2. Install PLANUTILS
 <p align="justify">Planutils is a suite of planners that simplifies the installation and usage of planners within a virtual environment. Once installed, you can conveniently use the suite of planners within the provided virtual environment.</p>
 
 ```bash
 cd
 sudo pip install planutils
 planutils activate
+```
+
+Setup Planutils.
+```bash
 planutils setup
 exit
 ```
