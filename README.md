@@ -249,19 +249,20 @@ planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -plan
 <p align="justify">To run Problem 3, make sure to have the PANDA planner available in your workspace. Load the PANDA planner before proceeding further.</p>
 
   ```bash
+cd
+cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn1
+cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn2
 cd Desktop/APTP_project/problem3
   ```
   
 ### HTN1
   ```bash
-cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn1
 cd htn1
 java -jar PANDA.jar -parser hddl domain3_htn1.hddl problem3_htn1.hddl
   ```
 
 ### HTN2
   ```bash
-cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn2
 cd htn2
 java -jar PANDA.jar -parser hddl domain3_htn2.hddl problem3_htn2.hddl
   ```
