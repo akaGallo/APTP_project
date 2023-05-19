@@ -8,7 +8,7 @@ The repository consists of the following components:
 - Problem Folders: There are 5 separate folders for each of the five problems described in the assignment.
 - Report PDF: This document contains the project report.
 - README file: it serves as a guide to install all the necessary materials required to run the code, and how to execute it.
-- 
+
 Here's a brief description of the five different tasks:
 
 * Problem 1: it involves developing the basic structure of the problem using the Planning Domain Definition Language (PDDL). The problem revolves around a robotic agent responsible for delivering necessary contents to injured people. To run this problem, you will need the Planutils environment and the FastDownward planner.
