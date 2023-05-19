@@ -84,6 +84,7 @@ vim singularity.conf
 <p align="justify">To enable Fast Downward support in your system, you need to install Apptainer beforehand. Installing Apptainer facilitates the containerization of Fast Downward, enabling you to create self-contained and portable environments for running Fast Downward effectively.</p>
 
 ```bash
+cd
 sudo apt update
 sudo apt upgrade
 sudo apt install -y software-properties-common
@@ -96,7 +97,6 @@ sudo apt install -y apptainer
 <p align="justify">Planutils is a suite of planners that simplifies the installation and usage of planners within a virtual environment. Once installed, you can conveniently use the suite of planners within the provided virtual environment.</p>
 
 ```bash
-cd
 sudo pip install planutils
 planutils activate
 ```
