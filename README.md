@@ -201,7 +201,7 @@ cd simple
 planutils run ff domain1_simple.pddl problem1_simple.pddl
 planutils run lama domain1_simple.pddl problem1_simple.pddl
 planutils run lama-first domain1_simple.pddl problem1_simple.pddl
-planutils run downward domain1_simple.pddl problem1_simple.pddl “--search astar(goalcount)”
+planutils run downward domain1_simple.pddl problem1_simple.pddl "--search astar(goalcount)"
   ```
 
 ### CRANE
@@ -211,7 +211,7 @@ cd crane
 planutils run ff domain1_crane.pddl problem1_crane.pddl
 planutils run lama domain1_crane.pddl problem1_crane.pddl
 planutils run lama-first domain1_crane.pddl problem1_crane.pddl
-planutils run downward domain1_crane.pddl problem1_crane.pddl “--search astar(goalcount)”
+planutils run downward domain1_crane.pddl problem1_crane.pddl "--search astar(goalcount)"
   ```
 
 ## PROBLEM 2
@@ -228,7 +228,7 @@ cd simple
 planutils run ff domain2_simple.pddl problem2_simple.pddl
 planutils run lama domain2_simple.pddl problem2_simple.pddl
 planutils run lama-first domain2_simple.pddl problem2_simple.pddl
-planutils run downward domain2_simple.pddl problem2_simple.pddl “--search astar(goalcount)”
+planutils run downward domain2_simple.pddl problem2_simple.pddl "--search astar(goalcount)"
   ```
 
 ### FLUENTS
