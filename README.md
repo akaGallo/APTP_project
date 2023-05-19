@@ -173,7 +173,7 @@ sudo apt install -y python3-colcon-common-extensions
 ### ROSDEP
 Install rosdep.
   ```bash
-sudo apt-get install python3-rosdep
+sudo apt-get install -y python3-rosdep
 sudo rosdep init
 rosdep update
   ```
