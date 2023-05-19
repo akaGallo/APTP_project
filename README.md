@@ -368,9 +368,7 @@ run
 ***
 # RESULTS
 ## Problem 1
-<figure>
-  <img width="337" alt="p1-simple-ff" src="https://github.com/akaGallo/APTP_project/assets/117358202/aa5674b6-ba7f-41b1-806e-aded210da8cb">
-  <figcaption>FF</figcaption>
-</figure>
+<img width="337" alt="p1-simple-ff" src="https://github.com/akaGallo/APTP_project/assets/117358202/aa5674b6-ba7f-41b1-806e-aded210da8cb">
+Caption
 
 ## Task 2
