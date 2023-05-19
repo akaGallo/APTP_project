@@ -26,6 +26,7 @@ Here's a brief description of the five different tasks:
 ****
 # Install all the planners in Ubuntu 22.04 using VirtualBox for MacOS
 <p align="justify">At the beginning, to update your packages and prepare for the next steps, please run the following commands:</p>
+
 ```bash
 sudo apt update
 sudo apt upgrade
