@@ -339,4 +339,4 @@ get plan
 run
 ```
 <img width="337" alt="p1-simple-ff" src="https://github.com/akaGallo/APTP_project/assets/117358202/157bd479-cd46-40dd-a58d-285b58216de6">
-
+<img width="328" alt="p1-simple-lama" src="https://github.com/akaGallo/APTP_project/assets/117358202/9bb333ec-119e-46f0-ab6e-07a5b7dab291">
