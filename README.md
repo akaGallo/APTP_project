@@ -368,8 +368,10 @@ run
 ***
 # RESULTS
 ## Problem 1
+
 <p>
-    <img src="[path_to_image](https://github.com/akaGallo/APTP_project/assets/117358202/aa5674b6-ba7f-41b1-806e-aded210da8cb)" alt="p1-simple-ff">
+    <img src="[path_to_image](https://github.com/akaGallo/APTP_project/assets/117358202/aa5674b6-ba7f-41b1-806e-aded210da8cb)" alt>
     <em>image_caption</em>
 </p>
+
 ## Task 2
