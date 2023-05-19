@@ -191,7 +191,7 @@ git clone https://github.com/akaGallo/APTP_project
 <p align="justify">To run the Problem 1, you will need the Planutils environment and the FastDownward planner for the usage of FF, LAMA, LAMA-FIRST and DOWNWARD.</p>
 
   ```bash
-cd Desktop/APTP_project/problem1
+cd APTP_project/problem1
   ```
   
 ### SIMPLE
@@ -206,7 +206,7 @@ planutils run downward domain1_simple.pddl problem1_simple.pddl “—search ast
 
 ### CRANE
   ```bash
-cd crane
+cd .. && cd crane
 # for each of the following wait the end of its execution
 planutils run ff domain1_crane.pddl problem1_crane.pddl
 planutils run lama domain1_crane.pddl problem1_crane.pddl
@@ -218,7 +218,7 @@ planutils run downward domain1_crane.pddl problem1_crane.pddl “—search astar
 <p align="justify">To run the Problem 2, you have to use again FF, LAMA and LAMA-FIRST for the SIMPLE case, while for the FLUENTS case you will need the ENHSP-2020 planner.</p>
 
   ```bash
-cd Desktop/APTP_project/problem2
+cd && cd Desktop/APTP_project/problem2
   ```
   
 ### SIMPLE
@@ -233,7 +233,7 @@ planutils run downward domain2_simple.pddl problem2_simple.pddl “—search ast
 
 ### FLUENTS
   ```bash
-cd fluents
+cd .. && cd fluents
 # for each of the following wait the end of its execution
 planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-blind”
 planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-hmax”
@@ -250,7 +250,7 @@ planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -pl
 <p align="justify">To run Problem 3, make sure to have the PANDA planner available in your workspace. Load the PANDA planner before proceeding further.</p>
 
   ```bash
-cd Desktop/APTP_project/problem3
+cd && cd Desktop/APTP_project/problem3
   ```
   
 ### HTN1
@@ -263,7 +263,7 @@ java -jar PANDA.jar -parser hddl domain3_htn1.hddl problem3_htn1.hddl
 ### HTN2
   ```bash
 cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn2
-cd htn2
+cd .. && cd htn2
 java -jar PANDA.jar -parser hddl domain3_htn2.hddl problem3_htn2.hddl
   ```
 
@@ -271,7 +271,7 @@ java -jar PANDA.jar -parser hddl domain3_htn2.hddl problem3_htn2.hddl
 <p align="justify">To run the Problem 4, you will need the OPTIC planner.</p>
 
   ```bash
-cd Desktop/APTP_project/problem4
+cd && cd Desktop/APTP_project/problem4
   ```
   
 ### SIMPLE
@@ -285,7 +285,7 @@ planutils run optic “-N -E -W1,1 domain4_simple.pddl problem4_simple.pddl”
 
 ### FLUENTS
   ```bash
-cd fluents
+cd .. && cd fluents
 # for each of the following wait the end of its execution
 planutils run optic “-N domain4_fluents.pddl problem4_fluents.pddl”
 planutils run optic “-N -W1,1 domain4_fluents.pddl problem4_fluents.pddl”
@@ -296,7 +296,7 @@ planutils run optic “-N -E -W1,1 domain4_fluents.pddl problem4_fluents.pddl”
 <p align="justify">To run PlanSys2, you need to have two separate terminals running simultaneously.</p>
 
   ```bash
-cd Desktop/APTP_project/problem5
+cd && cd Desktop/APTP_project/problem5
   ```
   
 ### SIMPLE
@@ -312,7 +312,7 @@ bash terminal1.sh
 <p align="justify">After setting up terminal 1, open a new terminal for terminal 2, that is dedicated to running the PlanSys2_terminal, which facilitates sending desired data (instances, predicates, goals) to the planner, computing a plan, and executing it.</p>
 
   ```bash
-cd plansys2_problem5_simple
+cd Desktop/APTP_project/problem5/plansys2_problem5_simple
 bash terminal2.sh
 # [INFO] [...] [terminal]: No problem file specified.
 # ROS2 Planning System console. Type "quit" to finish
@@ -324,13 +324,13 @@ run
 ### FLUENTS
 1. Open the TERMINAL 1 and run the following code:
   ```bash
-cd plansys2_problem5_fluents
+cd Desktop/APTP_project/problem5/plansys2_problem5_fluents
 bash terminal1.sh
   ```
   
 2. Then, open the TERMINAL 2 and execute the final output:
   ```bash
-cd plansys2_problem5_simple
+cd Desktop/APTP_project/problem5/plansys2_problem5_fluents
 bash terminal2.sh
 # [INFO] [...] [terminal]: No problem file specified.
 # ROS2 Planning System console. Type "quit" to finish
