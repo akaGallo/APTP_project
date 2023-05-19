@@ -314,9 +314,9 @@ bash terminal1.sh
 
 NOTE: If the program execution is halted due to the appearance of the following line in Terminal 1: 
   ```bash
-[ERROR] [plansys2_node-1]: process has died [pid 7203, exit code -11, cmd '/opt/ros/humble/lib/plansys2_bringup/plansys2_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_uaitmls4 --params-file /opt/ros/humble/share/plansys2_bringup/params/plansys2_params.yaml'].
+[ERROR] [plansys2_node-1]: process has died [pid ****, exit code -11, cmd '/opt/ros/humble/lib/plansys2_bringup/plansys2_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_uaitmls4 --params-file /opt/ros/humble/share/plansys2_bringup/params/plansys2_params.yaml'].
 ```
-please terminate both terminals by pressing Ctrl+C, and then relaunch the same code again.
+please terminate both terminals by pressing Ctrl+C, and then relaunch the same following code again:
 
   ```bash
 cd Desktop/APTP_project/problem5/plansys2_problem5_simple
