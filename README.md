@@ -101,13 +101,13 @@ sudo pip install planutils
 planutils activate
 ```
 
-Setup Planutils.
+3. Setup Planutils.
 ```bash
 planutils setup
 exit
 ```
 
-3. Install DOWNWARD, FF, LAMA, LAMA-FIRST, ENHSP-2020, OPTIC, TFD:
+4. Install DOWNWARD, FF, LAMA, LAMA-FIRST, ENHSP-2020, OPTIC, TFD:
 ```bash
 sudo planutils install -y downward ff lama lama-first enhsp-2020 optic tfd
 ```
