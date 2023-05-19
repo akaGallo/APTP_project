@@ -176,124 +176,139 @@ For running the planners on the domain and problem files of the assignment in th
 cd Desktop
 git clone https://github.com/akaGallo/EmergencyServicesLogistics-APTP2023.git planning
   ```
-  
-SONO ARRIVATO QUIIIIIIIIIII
 
-## PLANUTILS
-To run one of the planner installed in planutils follow the ensuing procedure
-1. Get to the folder of one of the following tasks
+## PROBLEM 1
   ```bash
-cd <your_workspace>/planning/{task1|task2|task4}
-  ```
-
-2. Activate planutils 
-```bash
-activate planutils
-```
-
-3. Run the correct planner for that task according to the following list:
-- Task1 & Task 2: downward
-- Task4: optic or tfd (temporal fast downward)
-```bash
-<downward|tfd|optic> taskX_domain.pddl taskX_problem.pddl  #Change the X with the number of the task
-```
-
-## PANDA
-To run the panda planner follow the ensuing procedure:
-1. Get to the folder of task 3
-  ```bash
-cd <your_workspace>/planning/task3
-  ```
-
-2. Run the planner jar file previusly downloaded from its path
-```bash
- java -jar /mnt/c/Users/<your_user>/<your_workspace>/PANDA.jar -parser hddl task3_domain_htn.hddl task3_problem_htn.hddl
-```
-
-## PLANSYS2 
-To run PlanSys2 two terminals are required. You can easily manage two Ubuntu terminals inside the same application using Windows Terminal.
-#### TERMINAL 1
-Terminal one is used to build the dependencies, compile the project and host the PlanSys2 planner based on ROS. To do so follow the ensuing procedure
-1. Get inside the project folder
-  ```bash
-cd <your_workspace>/planning/task5/plansys2_task5/
-  ```
-
-2. Install ROS2 infrastrucutre for the current terminal
-  ```bash
-source /opt/ros/humble/setup.bash
-  ```
-
-3. Compile the project a first time, it could lead to errors
-  ```bash
-colcon build --symlink-install
-  ```
-
-4. Now, install all the dependencies required by that project
-  ```bash
-rosdep install --from-paths ./ --ignore-src -r -y
-  ```
-
-5. Compile the project again, this time the compilation will be sucessful. If problem arises try to compile the code multiple times
-  ```bash 
-colcon build --symlink-install
-  ```
-
-6. Integrate ROS2 infrastrucutre with the PlanSys2 compiled in the previous step
-  ```bash
-source install/setup.bash
-  ```
-
-7. Luch ROS2. Now this terminal will be used only to show the results
-  ```bash
-ros2 launch plansys2_task5 plansys2_task5_launch.py
+cd Desktop/APTP_project/problem1
   ```
   
-All the above listed procedure for Terminal1 is automatically exetcuted by running the file `compile_and_run.sh` present in the plansys2_task5 folder. Therefore, you can just run the two following commands to execute all the procedure
+### SIMPLE
   ```bash
-cd <your_workspace>/planning/task5/plansys2_task5/
-bash compile_and_run.sh
+cd simple
+# for each of the following wait the end of its execution
+planutils run ff domain1_simple.pddl problem1_simple.pddl
+planutils run lama domain1_simple.pddl problem1_simple.pddl
+planutils run lama-first domain1_simple.pddl problem1_simple.pddl
+planutils run downward domain1_simple.pddl problem1_simple.pddl “—search astar(goalcount)”
   ```
 
-#### TERINAL 2
-Once terminal 1 has been set up, open a new terminal. Terminal two is used to run the PlanSys2_terminal, which is used to push into the planner all the wanted data (instances, predicates, goal), to compute a plan and to run it.
-
-1. Repeat step 1, 2 and 6 (of Terminal1) also for this terminal
+### CRANE
   ```bash
-cd <your_workspace>/planning/task5/plansys2_task5/
-source /opt/ros/humble/setup.bash
-source install/setup.bash
+cd crane
+# for each of the following wait the end of its execution
+planutils run ff domain1_crane.pddl problem1_crane.pddl
+planutils run lama domain1_crane.pddl problem1_crane.pddl
+planutils run lama-first domain1_crane.pddl problem1_crane.pddl
+planutils run downward domain1_crane.pddl problem1_crane.pddl “—search astar(goalcount)”
   ```
 
-2. Run ROS2-terminal
+## PROBLEM 2
   ```bash
-ros2 run plansys2_terminal plansys2_terminal
-  ```
-
-3. Source the problem data (using the absolute path from your system root)
-  ```bash
-source /mnt/c/Users/<you_user>/<your_workspace>/downloaded/plansys2_task/pddl/task5_problem 1  #Update this path according to your system
-  ```
-
-4. Get a plan
-  ```bash
-get plan
-  ```
-
-5. Run the plan. The status is visualized on the this terminal, the sum-up is visualized on the first terminal
-  ```bash
-run
+cd Desktop/APTP_project/problem2
   ```
   
-The first two steps of the above listed procedure for Terminal2 are automatically exetcuted by running the file `run_terminal.sh` present in the plansys2_task5 folder. Therefore, you can just run the two following commands to execute all the procedure
+### SIMPLE
   ```bash
-cd <your_workspace>/planning/task5/plansys2_task5/
-bash run_terminal.sh
-# One in the terminal run
-source /mnt/c/Users/<your_user>/<your_workspace>/plansys2_task5/pddl/task5_problem 1  #Update this path according to your system
-# If at this points error like 'Could not add the predicate <name_of_predicate>' start to manifest, please stop both the terminals (pressing CTRL+C) and repeat the procedure for terminal1 and terminal2. This will fix the problem. 
-# If no problem arises, run the following commands
+cd simple
+# for each of the following wait the end of its execution
+planutils run ff domain2_simple.pddl problem2_simple.pddl
+planutils run lama domain2_simple.pddl problem2_simple.pddl
+planutils run lama-first domain2_simple.pddl problem2_simple.pddl
+planutils run downward domain2_simple.pddl problem2_simple.pddl “—search astar(goalcount)”
+  ```
+
+### FLUENTS
+  ```bash
+cd fluents
+# for each of the following wait the end of its execution
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-blind”
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-hmax”
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner opt-hrmax”
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-aibr”
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hadd”
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrp”
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrph”
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hmrphj”
+planutils run enhsp-2020 “-o domain2_fluents.pddl -f problem2_fluents.pddl -planner sat-hradd”
+  ```
+
+## PROBLEM 3
+  ```bash
+cd Desktop/APTP_project/problem3
+  ```
+  
+### HTN1
+  ```bash
+cd htn1
+java -jar PANDA.jar -parser hddl domain3_htn1.hddl problem3_htn1.hddl
+  ```
+
+### HTN2
+  ```bash
+cd htn2
+java -jar PANDA.jar -parser hddl domain3_htn2.hddl problem3_htn2.hddl
+  ```
+
+## PROBLEM 4
+  ```bash
+cd Desktop/APTP_project/problem4
+  ```
+  
+### SIMPLE
+  ```bash
+cd simple
+# for each of the following wait the end of its execution
+planutils run optic “-N domain4_simple.pddl problem4_simple.pddl”
+planutils run optic “-N -W1,1 domain4_simple.pddl problem4_simple.pddl”
+planutils run optic “-N -E -W1,1 domain4_simple.pddl problem4_simple.pddl”
+  ```
+
+### FLUENTS
+  ```bash
+cd fluents
+# for each of the following wait the end of its execution
+planutils run optic “-N domain4_fluents.pddl problem4_fluents.pddl”
+planutils run optic “-N -W1,1 domain4_fluents.pddl problem4_fluents.pddl”
+planutils run optic “-N -E -W1,1 domain4_fluents.pddl problem4_fluents.pddl”
+  ```
+
+## PROBLEM 5
+  ```bash
+cd Desktop/APTP_project/problem5
+  ```
+  
+### SIMPLE
+1. Open the Terminal 1 and run the following code:
+  ```bash
+cd plansys2_problem5_simple
+bash terminal1.sh
+  ```
+  
+2. Then, open the Terminal 2 and execute the final output:
+  ```bash
+cd plansys2_problem5_simple
+bash terminal2.sh
+# [INFO] [...] [terminal]:No problem file specified.
+# ROS2 Planning System console. Type "quit" to finish
+source pddl/problem5_problem
 get plan
 run
-# If after the command 'run' nothing happens on Terminal2 then look at Terminal1. If here a message like 'process has died' is present. Then stop both the terminals (pressing CTRL+C) and repeat the procedure for terminal1 and terminal2. This will fix the problem. 
+```
+
+### FLUENTS
+1. Open the Terminal 1 and run the following code:
+  ```bash
+cd plansys2_problem5_fluents
+bash terminal1.sh
   ```
+  
+2. Then, open the Terminal 2 and execute the final output:
+  ```bash
+cd plansys2_problem5_simple
+bash terminal2.sh
+# [INFO] [...] [terminal]:No problem file specified.
+# ROS2 Planning System console. Type "quit" to finish
+source pddl/problem5_problem
+get plan
+run
+```
