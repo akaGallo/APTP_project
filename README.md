@@ -40,7 +40,7 @@ We require Singularity, a container platform, for installation. After installing
 sudo apt update
 sudo apt upgrade
 sudo apt-get install -y curl vim git build-essential libseccomp-dev pkg-config squashfs-tools cryptsetup
-export VERSION=1.20.3 OS=linux ARCH=amd64  # change this with the more recent in [GO](https://go.dev/dl/) website
+export VERSION=1.20.3 OS=linux ARCH=amd64  # change this with the more recent in the following GO website (https://go.dev/dl/)
 sudo rm -r /usr/local/go
 wget -O /tmp/go${VERSION}.${OS}-${ARCH}.tar.gz https://dl.google.com/go/go${VERSION}.${OS}-${ARCH}.tar.gz && \
 sudo tar -C /usr/local -xzf /tmp/go${VERSION}.${OS}-${ARCH}.tar.gz
