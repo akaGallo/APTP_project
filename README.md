@@ -300,12 +300,6 @@ planutils run optic "-N -E -W1,1 domain4_fluents.pddl problem4_fluents.pddl"
   ```bash
 cd Desktop/APTP_project/problem5
   ```
- 
-NOTE: If the program execution is halted due to the appearance of the following line in Terminal 1: 
-  ```bash
-[ERROR] [plansys2_node-1]: process has died [pid ****, exit code -11, cmd '/opt/ros/humble/lib/plansys2_bringup/plansys2_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_uaitmls4 --params-file /opt/ros/humble/share/plansys2_bringup/params/plansys2_params.yaml'].
-```
-please terminate both terminals by pressing Ctrl+C, and then relaunch the same following code again.
 
 ### SIMPLE
 1. Open the TERMINAL 1 and run the following code:
@@ -340,6 +334,12 @@ get plan
   ```bash
 run
 ```
+
+NOTE: If the program execution is halted due to the appearance of the following line in Terminal 1: 
+  ```bash
+[ERROR] [plansys2_node-1]: process has died [pid ****, exit code -11, cmd '/opt/ros/humble/lib/plansys2_bringup/plansys2_node --ros-args -r __ns:=/ --params-file /tmp/launch_params_uaitmls4 --params-file /opt/ros/humble/share/plansys2_bringup/params/plansys2_params.yaml'].
+```
+please terminate both terminals by pressing Ctrl+C, and then relaunch the same above code again.
 
 ### FLUENTS
 1. Open the TERMINAL 1 and run the following code:
