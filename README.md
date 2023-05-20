@@ -319,8 +319,10 @@ bash terminal2.sh
 ```
 
 We receive the following response:
-"[INFO] [...] [terminal]: No problem file specified."
-"ROS2 Planning System console. Type "quit" to finish"
+  ```bash
+# [INFO] [...] [terminal]: No problem file specified.
+# ROS2 Planning System console. Type "quit" to finish.
+  ```
 
 3. Load the problem file.
   ```bash
@@ -354,8 +356,6 @@ bash terminal1.sh
   ```bash
 cd Desktop/APTP_project/problem5/plansys2_problem5_fluents
 bash terminal2.sh
-# [INFO] [...] [terminal]: No problem file specified.
-# ROS2 Planning System console. Type "quit" to finish
 ```
 
 3. Load the problem file.
