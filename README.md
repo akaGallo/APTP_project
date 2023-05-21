@@ -297,33 +297,21 @@ planutils run optic "-N -E -W1,1 domain4_fluents.pddl problem4_fluents.pddl"
 
 ## PROBLEM 5
 <p align="justify">To run PlanSys2, you need to have two separate terminals running simultaneously.</p>
-
-  ```bash
-cd Desktop/APTP_project/problem5
-  ```
+<p align="justify">Start with the steps in terminal one to build the dependencies, compile the project, and host the PlanSys2 planner based on ROS.</p>
+<p align="justify">After setting up terminal 1, open a new terminal for terminal 2, that is dedicated to running the PlanSys2_terminal, which facilitates sending desired data (instances, predicates, goals) to the planner, computing a plan, and executing it:</p>
 
 ### SIMPLE
 1. Open the TERMINAL 1 and run the following code:
-<p align="justify">Proceed with the following steps in terminal one to build the dependencies, compile the project, and host the PlanSys2 planner based on ROS.</p>
-
   ```bash
-cd plansys2_problem5_simple
+cd Desktop/APTP_project/problem5/plansys2_problem5_simple
 bash terminal1.sh
   ```
-  
-2. Then, open the TERMINAL 2 and execute the final output:
-<p align="justify">After setting up terminal 1, open a new terminal for terminal 2, that is dedicated to running the PlanSys2_terminal, which facilitates sending desired data (instances, predicates, goals) to the planner, computing a plan, and executing it:</p>
 
+2. Then, open the TERMINAL 2 and execute the final output:
   ```bash
 cd Desktop/APTP_project/problem5/plansys2_problem5_simple
 bash terminal2.sh
 ```
-
-We receive the following response:
-  ```bash
-# [INFO] [...] [terminal]: No problem file specified.
-# ROS2 Planning System console. Type "quit" to finish.
-  ```
 
 3. Load the problem file.
   ```bash
