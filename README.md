@@ -251,6 +251,7 @@ planutils run enhsp-2020 "-o domain2_fluents.pddl -f problem2_fluents.pddl -plan
 
   ```bash
 cd
+# If you do not have PANDA.jar on your desktop, uncomment the following line:
 # wget https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.090/panda/PANDA.jar
 cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn1
 cp Desktop/PANDA.jar Desktop/APTP_project/problem3/htn2
